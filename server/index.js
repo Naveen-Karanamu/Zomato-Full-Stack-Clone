@@ -12,4 +12,4 @@ zomato.use(cors());
 
 zomato.get("/",(req, res)=>res.json({message:"Setup done"}));
 
-zomato.listen(3001,()=>console.log("Server is running"))
+zomato.listen(3002,()=>console.log("Server is running"))

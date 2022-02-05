@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node index",
-    "dev": "nodemon --exec babel-node index"
+    "dev": "nodemon --exec ./node_modules/.bin/babel-node index"
   },
   "repository": {
     "type": "git",
