@@ -13,6 +13,9 @@ const MenuSchema = new mongoose.Schema({
         ref: "Foods",
         unique:true
     }]
+},
+{
+    timestamps: true
 })
 
 export const MenuModel=mongoose.model("Menu",MenuSchema);
