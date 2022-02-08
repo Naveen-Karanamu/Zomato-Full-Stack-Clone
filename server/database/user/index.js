@@ -17,7 +17,7 @@ UserSchema.methods.generateJWT = function () {
     return jwt.sign({ user: this._id.toString() }, "zomato");
 }
 
-UserSchema.statics.findByEmailAndPhone = async ({email, phoneNumber}) => {
+UserSchema.statics.findByEmailAndPhone = async ({ email, phoneNumber }) => {
     // Check wheather the email exist
     const checkUserByEmail = await UserModel.findOne({ email });
     const checkUserByPhone = await UserModel.findOne({ phoneNumber });
@@ -28,6 +28,17 @@ UserSchema.statics.findByEmailAndPhone = async ({email, phoneNumber}) => {
     return false;
 };
 
+UserSchema.statics.findByEmailAndPassword = async ({ email, password }) => {
+    // Check if email exist
+    const user = await UserModel.findOne({ email });
+    if (!user) throw new Error("User does not exist!");
+
+    // compare password
+    const doesPasswordMatch = await bcrypt.compare(password, user.password)
+    if (!doesPasswordMatch) throw new Error("Invalid Password!");
+
+    return user;
+}
 UserSchema.pre("save", function (next) {
     const user = this;
 
