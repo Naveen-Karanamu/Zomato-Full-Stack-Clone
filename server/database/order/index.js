@@ -7,8 +7,7 @@ const OrderSchema = new mongoose.Schema({
     },
     orderDetails: [
         {
-            food: { type: mongoose.Types.ObjectId },
-            ref: "Foods",
+            food: { type: mongoose.Types.ObjectId ,ref: "Foods"},
             quantity: { type: Number, required: true },
             payMode: { type: String, required: true },
             status: { type: String, default: "Placed" },
@@ -25,4 +24,4 @@ const OrderSchema = new mongoose.Schema({
     timestamps: true
 })
 
-export const OrderModel=mongoose.model("Orders",OrderModel);
+export const OrderModel=mongoose.model("Orders",OrderSchema);

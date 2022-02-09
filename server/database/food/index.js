@@ -1,4 +1,4 @@
-import mongoose, { Types } from "mongoose";
+import mongoose from "mongoose";
 
 const FoodSchema = new mongoose.Schema({
     name: { type: String, required: true },
@@ -8,7 +8,7 @@ const FoodSchema = new mongoose.Schema({
     category: { type: String, required: true },
     photos: {
         type: mongoose.Types.ObjectId,
-        ref: "Images",
+        ref: "Images"
     },
     price: { type: Number, default: 149, required: true },
     addOns: [
@@ -20,11 +20,11 @@ const FoodSchema = new mongoose.Schema({
     restaurant: {
         type: mongoose.Types.ObjectId,
         ref: "Restaurants",
-        require: true
+        required: true
     }
 },
     {
         timestamps: true
-    });
+    })
 
 export const FoodModel = mongoose.model("Foods", FoodSchema);

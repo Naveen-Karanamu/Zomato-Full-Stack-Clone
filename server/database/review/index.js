@@ -12,4 +12,4 @@ const ReviewSchema = new mongoose.Schema({
     timestamps: true
 })
 
-export const ReviewModel= mongoose.model("Revies",ReviewSchema);
+export const ReviewModel= mongoose.model("Reviwes",ReviewSchema);
