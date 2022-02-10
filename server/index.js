@@ -10,11 +10,6 @@ import session  from "express-session";
 
 // configs
 import googleAuthConfig from "./config/google.config";
-zomato.use(session({
-    resave: false,
-    saveUninitialized: true,
-    secret: 'bla bla bla' 
-  }));
 
 // Microservice Routs
 import Auth from "./API/Auth"
@@ -26,6 +21,14 @@ import ConnectDB from "./database/connection"
 googleAuthConfig(passport);
 
 const zomato = express();
+
+// Session config
+zomato.use(session({
+  resave: false,
+  saveUninitialized: true,
+  secret: 'resolving error' 
+}));
+
 
 // MiddleWares
 zomato.use(express.json());
