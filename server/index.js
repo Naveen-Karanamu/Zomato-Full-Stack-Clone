@@ -13,7 +13,8 @@ import googleAuthConfig from "./config/google.config";
 
 // Microservice Routs
 import Auth from "./API/Auth"
-import Restaurant from "./API/Restaurant"
+import Restaurant from "./API/Restaurant";
+import Food from "./API/Food";
 
 // Database connection
 import ConnectDB from "./database/connection"
