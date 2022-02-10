@@ -6,7 +6,7 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import passport from "passport";
-import session  from "express-session";
+import session from "express-session";
 
 // configs
 import googleAuthConfig from "./config/google.config";
@@ -16,6 +16,7 @@ import Auth from "./API/Auth"
 import Restaurant from "./API/Restaurant";
 import Food from "./API/Food";
 import Menu from "./API/Menu"
+import Image from "./API/Image"
 
 // Database connection
 import ConnectDB from "./database/connection"
@@ -29,25 +30,26 @@ const zomato = express();
 zomato.use(session({
   resave: false,
   saveUninitialized: true,
-  secret: 'resolving error' 
+  secret: 'resolving error'
 }));
 
 
 // MiddleWares
 zomato.use(express.json());
-zomato.use(express.urlencoded({extended:false}));
+zomato.use(express.urlencoded({ extended: false }));
 zomato.use(helmet());
 zomato.use(cors());
 zomato.use(passport.initialize());
 zomato.use(passport.session());
 
 // Application Routs
-zomato.use("/auth",Auth);
-zomato.use("/restaurant",Restaurant);
-zomato.use("/food",Food);
-zomato.use("/menu",Menu);
+zomato.use("/auth", Auth);
+zomato.use("/restaurant", Restaurant);
+zomato.use("/food", Food);
+zomato.use("/menu", Menu);
+zomato.use("/image", Image);
 
 
-zomato.get("/",(req, res)=>res.json({message:"Setup done"}));
+zomato.get("/", (req, res) => res.json({ message: "Setup done" }));
 
-zomato.listen(3001,()=>ConnectDB().then(()=>console.log("Server is running")).catch(()=>console.log("Server is running, But database connection failed!")))
+zomato.listen(3001, () => ConnectDB().then(() => console.log("Server is running")).catch(() => console.log("Server is running, But database connection failed!")))
