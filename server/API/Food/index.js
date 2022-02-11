@@ -1,5 +1,5 @@
 // Libraries
-import express, { query, Router } from "express";
+import express, { query} from "express";
 import passport from "passport";
 
 // Database model

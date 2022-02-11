@@ -1,5 +1,5 @@
 // Libraries
-import express, { query, Router } from "express";
+import express from "express";
 import passport from "passport";
 import multer from "multer";
 
@@ -13,7 +13,7 @@ const Router = express.Router();
 
 // Multer config
 const storage = multer.memoryStorage();
-const Upload = multer({ storage });
+const upload = multer({ storage });
 
 /*
 Route: /
@@ -22,13 +22,13 @@ params: NONE
 Access: Public
 Method: POST
 */
-Router.post("/", Upload.array("file",4), async (req, res) => {
+Router.post("/", upload.single("file"), async (req, res) => {
     try {
-        const file = req.files;
+        const file = req.file;
 
         // s3 Bucket options
         const bucketOptions = {
-            Bucket: "",
+            Bucket: "zomato-images",
             Key: file.originalname,
             Body: file.buffer,
             ContentType: file.mimetype,
@@ -43,3 +43,5 @@ Router.post("/", Upload.array("file",4), async (req, res) => {
         return res.status(500).json({ error: error.message });
     }
 })
+
+export default Router;

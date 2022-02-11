@@ -1,11 +1,12 @@
 // Libraries
-import express, { query, Router } from "express";
+import express, { query } from "express";
 import passport from "passport";
 
 // Database model
-import { RestaurantModel } from "../../database/allModels";
+import { FoodModel } from "../../database/allModels";
 
 const Router = express.Router();
+
 
 /*
 Route: /
