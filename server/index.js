@@ -17,6 +17,7 @@ import Restaurant from "./API/Restaurant";
 import Food from "./API/Food";
 import Menu from "./API/Menu"
 import Image from "./API/Image"
+import Order from "./API/Orders"
 
 // Database connection
 import ConnectDB from "./database/connection"
@@ -30,7 +31,7 @@ const zomato = express();
 zomato.use(session({
   resave: false,
   saveUninitialized: true,
-  secret: 'resolving error'
+  secret: 'Session started'
 }));
 
 
@@ -42,12 +43,14 @@ zomato.use(cors());
 zomato.use(passport.initialize());
 zomato.use(passport.session());
 
+
 // Application Routs
 zomato.use("/auth", Auth);
 zomato.use("/restaurant", Restaurant);
 zomato.use("/food", Food);
 zomato.use("/menu", Menu);
 zomato.use("/image", Image);
+zomato.use("/order",Order);
 
 
 zomato.get("/", (req, res) => res.json({ message: "Setup done" }));
