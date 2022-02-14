@@ -10,6 +10,7 @@ import session from "express-session";
 
 // configs
 import googleAuthConfig from "./config/google.config";
+import routeConfig from "./config/route.config";
 
 // Microservice Routs
 import Auth from "./API/Auth"
@@ -26,6 +27,7 @@ import ConnectDB from "./database/connection"
 
 // passport configurations
 googleAuthConfig(passport);
+routeConfig(passport);
 
 const zomato = express();
 
