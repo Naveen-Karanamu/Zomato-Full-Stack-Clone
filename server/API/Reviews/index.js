@@ -5,6 +5,9 @@ import passport from "passport";
 // Database model
 import { ReviewModel } from "../../database/allModels";
 
+// Validations
+import { validateReviewDetails, validateReviewId } from "../../Validations/reviews";
+
 const Router = express.Router();
 
 /*
@@ -17,6 +20,8 @@ Method: POST
 */
 Router.post("/new", async (req, res) => {
     try {
+        await validateReviewDetails(req.body)
+
         const { reviewData } = req.body;
 
         await ReviewModel.create(reviewData);
@@ -37,6 +42,8 @@ Method: DELETE
 */
 Router.delete("/delete/:_id", async (req, res) => {
     try {
+        await validateReviewId(req.params);
+        
         const { _id } = req.params;
 
         await ReviewModel.findByIdAndDelete(_id);
