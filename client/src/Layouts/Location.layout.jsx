@@ -6,8 +6,8 @@ const LocationLayout = (props) => {
     return (
         <>
             <Navbar />
-            {props.children}
             <div className="hidden md:block"><Tabs /></div>
+            {props.children}            
             <div className="md:hidden"><Tabs /></div>
         </>)
 }
