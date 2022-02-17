@@ -102,21 +102,22 @@ const TabsLg = () => {
 
     return (
         <>
-            <div className="flex gap-12 lg:container lg:mx-auto lg:px-52 py-8 md:px-4">
+            <div className="flex gap-12 lg:container lg:mx-auto lg:px-52 pt-8 md:px-4">
                 {
                     tab.map((item) =>
                         <Link to={`/location/${item.id}`}>
-                            <div className={classnames("flex items-center gap-2 transition duration-700 ease-in-out",{"border-b-2 pb-4 border-zomatoRed-400":tabName===item.id})}>
+                            <div className={classnames("flex items-center gap-2 transition duration-700 ease-in-out", { "border-b-2 pb-6 border-zomatoRed-400": tabName === item.id })}>
                                 <span className={`${tabName === item.id ? item.activeColor : "bg-gray-100"} rounded-full p-4`}>
                                     <img src={tabName === item.id ? item.imageActive : item.imageDefault} alt="Delivery image" className="w-7 h-7" />
                                 </span>
                                 <p className="text-xl text-gray-500 font-medium">{item.title}</p>
                             </div>
                         </Link>
-                    ) 
+                    )
                 }
 
             </div>
+                <hr  className="-mb-8"/>
         </>
     )
 }
