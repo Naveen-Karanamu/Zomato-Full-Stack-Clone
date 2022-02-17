@@ -76,7 +76,7 @@ const NavLg = () => {
                             <IoMdArrowDropdown className="w-6 h-6 text-gray-600" />
                         </div>
                         <div className="flex items-center gap-4 "style={{width:"calc(30vw)"}}>
-                            <FiSearch className="w-5 h-5 text-gray-400" />
+                            <FiSearch className="w-6 h-6 text-gray-400" />
                             <input type="search" placeholder="Search for restaurant, cusine or a dish" className="focus:outline-none w-full text-md  text-gray-700" />
                         </div>
                     </div>

@@ -74,7 +74,7 @@ export const FoodsDeliveryCarausel = () => {
     return (
         <>
             <div className='p-4 lg:p-0 lg:container lg:mx-auto lg:px-52 bg-paleWhite-100 md:py-10 lg:py-10'>
-                <h1 className='text-xl lg:text-3xl lg:font-normal md:text-3xl pb-2 md:pb-6'>Inspiration for your first order</h1>
+                <h1 className='text-xl lg:text-3xl lg:font-semibold text-gray-700 md:text-3xl pb-2 md:pb-6'>Inspiration for your first order</h1>
 
                 <div className='md:hidden flex flex-wrap justify-around gap-3 md:gap-2'>
                     {

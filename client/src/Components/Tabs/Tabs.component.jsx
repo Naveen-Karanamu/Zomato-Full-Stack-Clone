@@ -131,26 +131,3 @@ const Tabs = () => {
 }
 
 export default Tabs;
-
-// <div className="flex items-center gap-2
-// ">
-// <span className="bg-gray-100 rounded-full p-4">
-//     <img src="https://b.zmtcdn.com/data/o2_assets/78d25215ff4c1299578ed36eefd5f39d1616149985.png" alt="Dining Out" className="w-8 h-8" />
-// </span>
-// <p className="text-xl text-gray-500 font-medium">Dining Out</p>
-// </div>
-// <div className="flex items-center gap-2
-// ">
-// <span className="bg-gray-100 rounded-full p-4">
-//     <img src="https://b.zmtcdn.com/data/o2_assets/01040767e4943c398e38e3592bb1ba8a1616150142.png" alt="Nightlife image" className="w-8 h-8" />
-// </span>
-// <p className="text-xl text-gray-500 font-medium">Nightlife</p>
-// </div>
-// <div className="flex items-center gap-2
-// ">
-// <span className="bg-gray-100 rounded-full p-4">
-//     <img src="https://b.zmtcdn.com/data/o2_assets/54cad8274d3c3ec7129e0808a13b27c31616582882.png" alt="Nutrition image" className="w-8 h-8" />
-//     {/* https://b.zmtcdn.com/data/o2_assets/0f6dcb1aef93fa03ea3f91f37918f3bc1616649503.png */}
-// </span>
-// <p className="text-xl text-gray-500 font-medium">Nutrition</p>
-// </div>
