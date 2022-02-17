@@ -69,7 +69,7 @@ export const BrandsDeliveryCarausel = () => {
 
     return (
         <>
-            <div className='p-4 lg:p-0 lg:container lg:mx-auto lg:px-64 md:py-8 lg:py-10'>
+            <div className='p-4 lg:p-0 lg:container lg:mx-auto lg:px-52 md:py-8 lg:py-10'>
                 <h1 className='text-xl lg:text-3xl lg:font-normal md:text-3xl pb-2 md:pb-6'>Top Brands for you</h1>
 
                 <div className='md:hidden block px-1'>

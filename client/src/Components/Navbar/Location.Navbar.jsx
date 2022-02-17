@@ -62,28 +62,28 @@ const NavMd = () => {
 const NavLg = () => {
     return (
         <>
-            <div className="container mx-auto px-64 flex w-full items-center justify-between my-3">
+            <div className="container mx-auto px-52 flex w-full items-center justify-between my-3">
                 <div className="flex items-center gap-6">
-                    <div className="w-28">
+                    <div className="w-32">
                         <img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png?fit=around|198:42&crop=198:42;*,*" alt="logo" className="w-full h-full" />
                     </div>
-                    <div className="flex items-center gap-2 px-2 shadow py-2 border rounded-md">
+                    <div className="flex items-center gap-2 px-2 shadow py-3 border rounded-md">
                         <div className="flex items-center justify-between border-r-2  pr-2 w-56 ">
                             <div className="flex items-center gap-2">
-                                <HiLocationMarker className="text-zomatoRed-300 w-5 h-5" />
-                                <p className="text-sm text-gray-500">Vishakapatnam</p>
+                                <HiLocationMarker className="text-zomatoRed-200 w-6 h-6" />
+                                <p className="text-md text-gray-500">Vishakapatnam</p>
                             </div>
                             <IoMdArrowDropdown className="w-6 h-6 text-gray-600" />
                         </div>
-                        <div className="flex items-center gap-4 "style={{width:"calc(26vw)"}}>
+                        <div className="flex items-center gap-4 "style={{width:"calc(30vw)"}}>
                             <FiSearch className="w-5 h-5 text-gray-400" />
-                            <input type="search" placeholder="Search for restaurant, cusine or a dish" className="focus:outline-none w-full text-sm  text-gray-700" />
+                            <input type="search" placeholder="Search for restaurant, cusine or a dish" className="focus:outline-none w-full text-md  text-gray-700" />
                         </div>
                     </div>
                 </div>
                 <div className="flex gap-8">
-                    <button className="text-gray-400 text-lg hover:text-gray-600">Log in</button>
-                    <button className="text-gray-400 text-lg hover:text-gray-600">Sign up</button>
+                    <button className="text-gray-400 text-xl hover:text-gray-600">Log in</button>
+                    <button className="text-gray-400 text-xl hover:text-gray-600">Sign up</button>
                 </div>
             </div>
         </>
