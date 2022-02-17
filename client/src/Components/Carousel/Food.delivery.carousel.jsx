@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import { NextArrow, PrevArrow } from './Arrows';
 
 
-export const DeliveryCarausel = () => {
+export const FoodsDeliveryCarausel = () => {
 
     const images = [{
         image: "https://b.zmtcdn.com/data/dish_images/d19a31d42d5913ff129cafd7cec772f81639737697.png",
@@ -73,7 +73,7 @@ export const DeliveryCarausel = () => {
 
     return (
         <>
-            <div className='p-4 lg:p-0 lg:container lg:mx-auto lg:px-64'>
+            <div className='p-4 lg:p-0 lg:container lg:mx-auto lg:px-64 bg-paleWhite-100 md:py-10 lg:py-10'>
                 <h1 className='text-xl lg:text-3xl lg:font-normal md:text-3xl pb-2 md:pb-6'>Inspiration for your first order</h1>
 
                 <div className='md:hidden flex flex-wrap justify-around gap-3 md:gap-2'>
@@ -85,7 +85,7 @@ export const DeliveryCarausel = () => {
 
                 </div>
 
-                <div className='hidden md:block lg:hidden'>
+                <div className='hidden md:block lg:hidden px-4'>
                     <Slider {...settingsMd}>
                         {
                             images.map((data) =>
@@ -109,4 +109,4 @@ export const DeliveryCarausel = () => {
     )
 }
 
-export default DeliveryCarausel;
+export default FoodsDeliveryCarausel;

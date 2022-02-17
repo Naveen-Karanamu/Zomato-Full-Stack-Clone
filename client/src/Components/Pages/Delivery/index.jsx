@@ -1,13 +1,16 @@
 import React from 'react'
 
 // components
-import DeliveryCarausal from '../../Carousel/delivery.carousel';
+import FoodsDeliveryCarausal from '../../Carousel/Food.delivery.carousel';
+import BrandsDeliveryCarausel from '../../Carousel/Brands.delivery.carousel';
 
 
 export const Delivery = () => {
+  
   return (
     <>
-    <DeliveryCarausal />
+    <FoodsDeliveryCarausal />
+    <BrandsDeliveryCarausel />
     </>
   )
 }
