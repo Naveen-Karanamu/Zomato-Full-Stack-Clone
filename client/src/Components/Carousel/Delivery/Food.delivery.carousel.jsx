@@ -1,10 +1,10 @@
 import React from 'react'
-import DeliveryImages from '../Images Carousel/Delivery.images';
+import DeliveryImages from '../../Images Carousel/Delivery.images';
 
 import Slider from "react-slick";
 
 // Arrows
-import { NextArrow, PrevArrow } from './Arrows';
+import { NextArrow, PrevArrow } from '../Arrows';
 
 
 export const FoodsDeliveryCarausel = () => {

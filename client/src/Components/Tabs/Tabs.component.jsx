@@ -106,7 +106,7 @@ const TabsLg = () => {
                 {
                     tab.map((item) =>
                         <Link to={`/location/${item.id}`}>
-                            <div className={classnames("flex items-center gap-2 transition duration-700 ease-in-out", { "border-b-2 pb-6 border-zomatoRed-400": tabName === item.id })}>
+                            <div className={classnames("flex items-center gap-2 transition duration-700 ease-in-out", { "border-b-2 pb-6 border-zomatoRed-300": tabName === item.id })}>
                                 <span className={`${tabName === item.id ? item.activeColor : "bg-gray-100"} rounded-full p-4`}>
                                     <img src={tabName === item.id ? item.imageActive : item.imageDefault} alt="Delivery image" className="w-7 h-7" />
                                 </span>
