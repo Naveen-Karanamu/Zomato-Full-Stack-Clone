@@ -43,7 +43,7 @@ const DefaultImageGrid = (props) => {
                                 <img src={props.images[4]} className='w-full h-full object-cover' />
                             </div>
                             <div className="bg-picGray-100 w-full h-full z-10 absolute top-0 left-0 opacity-90" />
-                            <div className="flex items-center text-white  flex-col justify-center absolute right-12 top-16 z-10">
+                            <div className="flex items-center text-white  flex-col justify-center absolute lg:right-12 lg:top-16 top-14 right-4 z-10">
                                 <div className="bg-gray-500 p-2 rounded-full">
                                     <BsCamera className="w-6 h-6" />
                                 </div>

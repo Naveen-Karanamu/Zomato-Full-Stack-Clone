@@ -10,7 +10,7 @@ const ResNavSm = () => {
         <div>
             <div className="bg-white px-4 py-3 flex justify-between items-center shadow-md">
                 <div className="flex items-center gap-2">
-                    <HiArrowLeft className="w-5 h-5 text-gray-700"/>
+                    <HiArrowLeft className="w-5 h-5 text-gray-700" />
                     <div className="w-24 ">
                         <img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png?fit=around|198:42&crop=198:42;*,*" alt="logo" className="w-full h-full" />
                     </div>
@@ -22,12 +22,9 @@ const ResNavSm = () => {
                 </div>
             </div>
 
-            <div className="flex justify-between px-5 py-4 items-center shadow-sm">
-                <div className="flex items-center gap-1">
-                    <HiLocationMarker className="text-zomatoRed-400 w-5 h-5" />
-                    <p className="text-sm ">Vishakapatnam</p>
-                </div>
-                <span className="border border-gray-300  rounded-full  bg-gray-50"><FiSearch className="w-4 h-4 m-2" /></span>
+            <div className="flex gap-3 px-5 my-3 mx-2 rounded-full py-3 items-center border shadow-sm  ">
+                <FiSearch  className="text-gray-500 w-5 h-5"/>
+                <input type="search" placeholder="Search for restaurants, cuisine or a dish " className="focus:outline-none w-full" />
             </div>
         </div>
     )
