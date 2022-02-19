@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
 // components
-import FoodsDeliveryCarausal from '../../Carousel/Delivery/Food.delivery.carousel';
-import BrandsDeliveryCarausel from '../../Carousel/Delivery/Brands.delivery.carousel';
-import RestaurantCard from '../../Cards/Restaurants/Delivery.restaurants';
+import FoodsDeliveryCarausal from '../../../Carousel/Delivery/Food.delivery.carousel';
+import BrandsDeliveryCarausel from '../../../Carousel/Delivery/Brands.delivery.carousel';
+import RestaurantCard from '../../../Cards/Restaurants/Delivery.restaurants';
 
 
 export const Delivery = () => {

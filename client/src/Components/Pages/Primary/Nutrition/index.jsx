@@ -1,7 +1,7 @@
 import React from "react";
-import NutritionCard from "../../Cards/Nutrition/Nutrition.card";
-import NutritionCarousal from "../../Carousel/Nutrition/Nutrition.carousel";
-import NutritionHeroCarousel from "../../Carousel/Nutrition/NutritionHero.carousel";
+import NutritionCard from "../../../Cards/Nutrition/Nutrition.card";
+import NutritionCarousal from "../../../Carousel/Nutrition/Nutrition.carousel";
+import NutritionHeroCarousel from "../../../Carousel/Nutrition/NutritionHero.carousel";
 
 const NutritionPage = () => {
     return (

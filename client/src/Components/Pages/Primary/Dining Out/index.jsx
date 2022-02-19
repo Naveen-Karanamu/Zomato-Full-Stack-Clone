@@ -1,9 +1,9 @@
 import React from "react";
+import DiningCarousel from "../../../Carousel/Dining/Dining.carousel";
 
 import { RiArrowRightSFill } from "react-icons/ri"
-import NightlifeCarousel from "../../Carousel/Nightlife/Nightlife.carousel";
 
-const DiningOutPage = () => {
+const NightlifePage = () => {
     return (
         <>
             <div>
@@ -32,7 +32,7 @@ const DiningOutPage = () => {
                         </span>
                     </div>
                     <div className="md:pt-4">
-                        <NightlifeCarousel />
+                        <DiningCarousel />
                     </div>
                 </div>
             </div>
@@ -40,4 +40,4 @@ const DiningOutPage = () => {
     )
 }
 
-export default DiningOutPage;
+export default NightlifePage;
