@@ -14,7 +14,23 @@ const NutritionHeroCarousel = () => {
         "https://b.zmtcdn.com/web/nutrition/assets/3872dc3041e9633ba40b51e7dbff263a1620108770.png"
     ])
 
-    const settings = {
+    const settingsSm = {
+        arrows: false,
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    };
+    const settingsMd = {
+        arrows: false,
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    };
+    const settingsLg = {
         arrows: true,
         dots: true,
         infinite: true,
@@ -27,8 +43,26 @@ const NutritionHeroCarousel = () => {
 
     return (
         <>
-            <div>
-                <Slider {...settings}>
+            <div className="md:hidden">
+                <Slider {...settingsSm}>
+                    {
+                        nutriImg.map((img)=>(
+                            <NutritionHeroImages img={img}/>
+                        ))
+                    }
+                </Slider>
+            </div>
+            <div className="hidden md:block lg:hidden">
+                <Slider {...settingsMd}>
+                    {
+                        nutriImg.map((img)=>(
+                            <NutritionHeroImages img={img}/>
+                        ))
+                    }
+                </Slider>
+            </div>
+            <div className="hidden lg:block">
+                <Slider {...settingsLg}>
                     {
                         nutriImg.map((img)=>(
                             <NutritionHeroImages img={img}/>

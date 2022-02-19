@@ -13,9 +13,9 @@ export const RestaurantCard = (props) => {
                             <img src={props.photos.length && props.photos[0]} alt="biri" className='w-full h-full rounded-t-2xl md:rounded-2xl object-cover' />
                         </div>
                         <div className='flex justify-between items-center relative'>
-                            {props.isPro && (<span className='text-white bg-zomatoRed-400 rounded-r text-sm px-2 absolute left-2 bottom-11 lg:bottom-14 '>Pro extra 15% OFF</span>)}
-                            {props.isOff && (<span className='text-white bg-blue-500 rounded-r text-sm px-2 absolute left-2 bottom-3 lg:bottom-6'>{props.isOff}% OFF</span>)}
-                            {props.deliveryTime && (<span className='bg-white p-1  rounded bg-opacity-80 text-sm absolute right-6 bottom-3 lg:bottom-6'>{props.deliveryTime} min</span>)}
+                            {props.isPro && (<span className='text-white bg-zomatoRed-400 rounded-r text-sm px-2 absolute lg:left-2 bottom-11 lg:bottom-14 '>Pro extra 15% OFF</span>)}
+                            {props.isOff && (<span className='text-white bg-blue-500 rounded-r text-sm px-2 absolute lg:left-2 bottom-3 lg:bottom-6'>{props.isOff}% OFF</span>)}
+                            {props.deliveryTime && (<span className='bg-white p-1  rounded bg-opacity-80 text-sm absolute right-3 lg:right-6 bottom-3 lg:bottom-6'>{props.deliveryTime} min</span>)}
                         </div>
                     </div>
                     <div className='p-3'>
