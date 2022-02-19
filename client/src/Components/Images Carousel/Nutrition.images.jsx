@@ -3,7 +3,7 @@ import React from "react";
 const NutritionCard = ({ image, title }) => {
   return (
     <>
-      <div className=" bg-white shadow rounded-md w-28 h-24 lg:h-full md:px-2 pt-2 md:pt-0 md:w-56 lg:pb-6  md:h-56">
+      <div className=" bg-white shadow rounded-md w-28 h-28 lg:h-full md:px-2 pt-2 md:pt-0 md:w-56 lg:pb-6  md:h-56">
         <div className="w-full h-12 md:h-36">
           <img
             src={image}

@@ -8,7 +8,7 @@ const LocationLayout = (props) => {
             <Navbar />
             <div className="hidden md:block"><Tabs /></div>
             {props.children}            
-            <div className="md:hidden"><Tabs /></div>
+            <div className="md:hidden mt-20"><Tabs /></div>
         </>)
 }
 
