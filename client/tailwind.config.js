@@ -19,6 +19,9 @@ module.exports = {
         paleWhite: {
           100: "#f8f8f8"
         },
+        picGray:{
+          100:"#b1b1b1"
+        },
       }
     },
   },
