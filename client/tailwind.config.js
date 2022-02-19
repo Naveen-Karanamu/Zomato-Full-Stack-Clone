@@ -22,6 +22,9 @@ module.exports = {
         picGray:{
           100:"#b1b1b1"
         },
+        buttonGreen:{
+          100:"#267e3e"
+        }
       }
     },
   },
