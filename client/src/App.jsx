@@ -15,7 +15,10 @@ function App() {
       <Route path="/" exact>
         <Redirect to="/location/delivery"/>
       </Route>
-      {/* <LocationHOC path="/location" exact component={Temp} /> */}
+      <Route path="/restaurant/:id" exact>
+        <Redirect to="/restaurant/:id/overview" />
+      </Route>
+      
       <LocationHOC path="/location/:tabName" exact component={Tab} />
       <RestaurantHOC path="/restaurant/:id" exact component={RestaurantPage}/>
       <RestaurantHOC path="/restaurant/:id/overview" exact component={RestaurantOverview}/>
