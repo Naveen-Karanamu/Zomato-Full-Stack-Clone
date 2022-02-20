@@ -2,10 +2,12 @@ import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 
 import MainMenuComponent from './MainMenu.restaurant';
+import InfoCard from '../../../Cards/Restaurants/InfoCard';
 
 // Icons
 import { MdArrowRight } from "react-icons/md"
 import { MdOutlineDone } from "react-icons/md"
+import InfoCarousel from '../../../Carousel/Restaurant/InfoCarousel';
 
 
 export const RestaurantOverview = () => {
@@ -13,10 +15,10 @@ export const RestaurantOverview = () => {
 
     return (
         <>
-            <div className='flex flex-col md:flex-row relative lg:flex-row-reverse'>
-                <aside className='hidden md:block w-1/3 h-20 bg-gray-300 sticky top-0'></aside>
+            <div className='flex flex-col relative md:flex-row-reverse'>
+                <aside className='hidden md:block md:w-1/4 lg:w-1/3 h-20 bg-gray-300 sticky top-0'></aside>
 
-                <div className='md:w-2/3 '>
+                <div className='lg::w-2/3 md:w-3/4'>
                     <h1 className='text-3xl font-normal hidden md:block '>About this place</h1>
                     <div className='flex justify-between items-center py-4'>
                         <h2 className='text-lg md:text-xl md:py-1 text-gray-800'>Menu</h2>
@@ -69,6 +71,11 @@ export const RestaurantOverview = () => {
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <div>
+                    <h2 className='text-lg md:text-xl md:py-4 py-2 text-gray-800'>Similar Restaurants</h2>
+                        <InfoCarousel />
                     </div>
 
                 </div>
