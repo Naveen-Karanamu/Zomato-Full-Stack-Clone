@@ -21,6 +21,7 @@ import Image from "./API/Image"
 import Order from "./API/Orders"
 import Review from "./API/Reviews"
 import User from "./API/Users"
+import MailServices from "./API/Mail"
 
 // Database connection
 import ConnectDB from "./database/connection"
@@ -57,6 +58,7 @@ zomato.use("/image", Image);
 zomato.use("/order",Order);
 zomato.use("/review", Review);
 zomato.use("/user", User);
+zomato.use("/mail", MailServices);
 
 
 zomato.get("/", (req, res) => res.json({ message: "Setup done" }));
