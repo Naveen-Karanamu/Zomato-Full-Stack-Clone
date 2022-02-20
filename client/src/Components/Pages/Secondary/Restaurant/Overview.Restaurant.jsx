@@ -1,15 +1,18 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 
+
+
 import MainMenuComponent from './MainMenu.restaurant';
 import InfoCard from '../../../Cards/Restaurants/InfoCard';
+import InfoCarousel from '../../../Carousel/Restaurant/InfoCarousel';
+import ReviewsRestaurant from './Reviews.restaurant';
 
 // Icons
 import { MdArrowRight } from "react-icons/md"
 import { MdOutlineDone } from "react-icons/md"
 import { IoMdArrowDropright } from "react-icons/io"
-import InfoCarousel from '../../../Carousel/Restaurant/InfoCarousel';
-import ReviewsRestaurant from './Reviews.restaurant';
+import MapColumn from './MapColumn.restaurant';
 
 
 export const RestaurantOverview = () => {
@@ -17,10 +20,12 @@ export const RestaurantOverview = () => {
 
     return (
         <>
-            <div className='flex flex-col relative md:flex-row-reverse'>
-                <aside className='hidden md:block md:w-1/4 lg:w-1/3 h-20 bg-gray-300 sticky top-0'></aside>
+            <div className='flex flex-col relative md:flex-row-reverse gap-4'>
+                <aside className='hidden md:block md:w-1/3 lg:w-1/3 border shadow-lg rounded-xl sticky top-0 p-4' style={{ height: "fit-content" }}>
+                    <MapColumn phone="+919295000521" mapLocation={[17.688229266181448, 83.20616323443606]} title="Helapuri Restaurant" address="8-8-36, Main Road, Old Gajuwaka, Vizag"/>
+                </aside>
 
-                <div className='lg::w-2/3 md:w-3/4'>
+                <div className='lg::w-2/3 md:w-2/3'>
                     <h1 className='text-3xl font-normal hidden md:block '>About this place</h1>
                     <div className='flex justify-between items-center py-4'>
                         <h2 className='text-lg md:text-xl md:py-1 text-gray-800'>Menu</h2>
@@ -75,6 +80,10 @@ export const RestaurantOverview = () => {
                         </div>
                     </div>
 
+                    <div className='md:hidden border rounded-md py-4 px-2'>
+                    <MapColumn phone="+919295000521" mapLocation={[17.688229266181448, 83.20616323443606]} title="Helapuri Restaurant" address="8-8-36, Main Road, Old Gajuwaka, Vizag"/>
+                    </div>
+
                     <div>
                         <h2 className='text-lg md:text-xl md:py-4 py-2 text-gray-800'>Similar Restaurants</h2>
                         <InfoCarousel />
@@ -86,12 +95,12 @@ export const RestaurantOverview = () => {
                         </div>
                         <button className='flex gap-1 items-center text-white bg-zomatoRed-300 rounded-lg px-3 py-2'>Get Restaurant Widge <IoMdArrowDropright /></button>
                     </div>
-                    <hr className='mt-3 pb-6'/>
+                    <hr className='mt-3 pb-6' />
 
                     <div>
                         <ReviewsRestaurant />
                     </div>
-                    
+
 
 
                 </div>
