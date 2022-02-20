@@ -7,7 +7,9 @@ import InfoCard from '../../../Cards/Restaurants/InfoCard';
 // Icons
 import { MdArrowRight } from "react-icons/md"
 import { MdOutlineDone } from "react-icons/md"
+import { IoMdArrowDropright } from "react-icons/io"
 import InfoCarousel from '../../../Carousel/Restaurant/InfoCarousel';
+import ReviewsRestaurant from './Reviews.restaurant';
 
 
 export const RestaurantOverview = () => {
@@ -74,9 +76,23 @@ export const RestaurantOverview = () => {
                     </div>
 
                     <div>
-                    <h2 className='text-lg md:text-xl md:py-4 py-2 text-gray-800'>Similar Restaurants</h2>
+                        <h2 className='text-lg md:text-xl md:py-4 py-2 text-gray-800'>Similar Restaurants</h2>
                         <InfoCarousel />
                     </div>
+                    <div className='hidden md:flex justify-between items-center bg-gray-100 p-4 rounded-md mt-10'>
+                        <div className='flex flex-col gap-1'>
+                            <h1 className='text-2xl font-semibold text-gray-700'>Are you a food blogger?</h1>
+                            <span className='text-zomatoRed-400 flex items-center gap-1 text-sm'>Add a Zomato spoonback to your blog. <IoMdArrowDropright /></span>
+                        </div>
+                        <button className='flex gap-1 items-center text-white bg-zomatoRed-300 rounded-lg px-3 py-2'>Get Restaurant Widge <IoMdArrowDropright /></button>
+                    </div>
+                    <hr className='mt-3 pb-6'/>
+
+                    <div>
+                        <ReviewsRestaurant />
+                    </div>
+                    
+
 
                 </div>
             </div>
