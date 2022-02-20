@@ -10,7 +10,6 @@ const {id}= useParams();
             <Link to={`/restaurant/${id}/${props.route}`}>
                 <div className='h-full relative'>
                     <h1 className={props.isActive ? 'text-zomatoRed-400 text-lg md:text-xl font-normal' : 'text-gray-600 text-lg md:text-xl font-normal'}>{props.title}</h1>
-                    {/* <div className={props.isActive && `border-b-2  border-zomatoRed-400 absolute top-0 w-full h-full`} /> */}
                 </div>
             </Link>
             

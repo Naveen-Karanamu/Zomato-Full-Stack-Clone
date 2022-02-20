@@ -6,8 +6,8 @@ import Tab from "./Components/Tabs/Navigator";
 import RestaurantHOC from "./HOC/Restaurant.HOC";
 
 import RestaurantPage from "./Components/Pages/Secondary/Restaurant"
+import RestaurantOverview from "./Components/Pages/Secondary/Restaurant/Overview.Restaurant";
 
-import Temp from "./temp";
 
 function App() {
   return (
@@ -15,10 +15,10 @@ function App() {
       <Route path="/" exact>
         <Redirect to="/location/delivery"/>
       </Route>
-      <LocationHOC path="/location" exact component={Temp} />
+      {/* <LocationHOC path="/location" exact component={Temp} /> */}
       <LocationHOC path="/location/:tabName" exact component={Tab} />
       <RestaurantHOC path="/restaurant/:id" exact component={RestaurantPage}/>
-      <RestaurantHOC path="/restaurant/:id/overview" exact component={RestaurantPage}/>
+      <RestaurantHOC path="/restaurant/:id/overview" exact component={RestaurantOverview}/>
       <RestaurantHOC path="/restaurant/:id/order-online" exact component={RestaurantPage}/>
       <RestaurantHOC path="/restaurant/:id/reviews" exact component={RestaurantPage}/>
       <RestaurantHOC path="/restaurant/:id/photos" exact component={RestaurantPage}/>
