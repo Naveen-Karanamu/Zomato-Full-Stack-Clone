@@ -6,6 +6,7 @@ import MenuList from "./MenuList"
 // Icons
 import { AiOutlinePlus, AiOutlineCompass, AiOutlineClockCircle } from "react-icons/ai"
 import { MdOutlineDone } from "react-icons/md"
+import { RiSearchLine } from "react-icons/ri"
 
 export const OrderOnline = () => {
   return (
@@ -29,7 +30,13 @@ export const OrderOnline = () => {
           <div >
             <div>
               <section className='hidden md:flex flex-col gap-4'>
-                <h2 className='text-xl md:text-2xl text-gray-800 md:text-black md:font-medium'>Order Online</h2>
+                <div className='flex items-center justify-between'>
+                  <h2 className='text-xl md:text-2xl text-gray-800 md:text-black md:font-medium'>Order Online</h2>
+                  <div className='flex items-center gap-3 border pl-4  py-2 border-gray-300 rounded-lg'>
+                    <RiSearchLine className='w-5 h-5 text-gray-400' />
+                    <input type="search" placeholder='Seach within menu' className='focus:outline-none text-lg mr-8' />
+                  </div>
+                </div>
                 <p className='text-base gap-2 text-gray-400 flex items-center'>
                   <AiOutlineCompass className='w-5 h-5' /> Live track your order <span> | </span> <AiOutlineClockCircle className='w-5 h-5' /> 38 min
                 </p>
@@ -58,14 +65,17 @@ export const OrderOnline = () => {
               </section>
             </div>
             <div className='md:py-4'>
-              <div className='flex gap-2 items-center'>
-                <input type="checkbox" className='w-4 h-4 ' /> <p>veg only</p>
+              <div className='flex items-center justify-between'>
+                <div className='flex gap-2 items-center pt-2 md:pt-0'>
+                  <input type="checkbox" className='w-4 h-4 ' /> <p>veg only</p>
+                </div>
+                  <RiSearchLine className='text-gray-400 w-6 h-6' />
               </div>
               <div>
                 <h2 className='text-xl  py-4 text-gray-800 md:text-black md:font-medium md:text-2xl'>Recommended</h2>
               </div>
               <div className='flex flex-col gap-10'>
-              <FoodComponent />
+                <FoodComponent />
               </div>
             </div>
           </div>
