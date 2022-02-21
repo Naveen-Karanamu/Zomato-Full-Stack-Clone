@@ -1,9 +1,9 @@
 import React from 'react'
 // Componrnts 
 import ResNavbar from '../Components/Navbar/Restaurant.navbar';
-import DefaultImageGrid from '../Components/Pages/Secondary/Restaurant/DefaultImageGrid.restaurant';
-import ResInfo from '../Components/Pages/Secondary/Restaurant/Info.restaurant';
-import RestaurantOverview from '../Components/Pages/Secondary/Restaurant/Overview.Restaurant';
+import DefaultImageGrid from '../Components/Pages/Secondary/Restaurant/Overview/DefaultImageGrid.restaurant';
+import ResInfo from '../Components/Pages/Secondary/Restaurant/Overview/Info.restaurant';
+import RestaurantOverview from '../Components/Pages/Secondary/Restaurant/Overview/Overview.Restaurant';
 import TabsContainer from '../Components/Tabs/Restaurant.tabs';
 
 

@@ -4,8 +4,8 @@ import { Link, useParams } from 'react-router-dom'
 
 
 import MainMenuComponent from './MainMenu.restaurant';
-import InfoCard from '../../../Cards/Restaurants/InfoCard';
-import InfoCarousel from '../../../Carousel/Restaurant/InfoCarousel';
+import InfoCard from '../../../../Cards/Restaurants/InfoCard';
+import InfoCarousel from '../../../../Carousel/Restaurant/InfoCarousel';
 import ReviewsRestaurant from './Reviews.restaurant';
 
 // Icons
@@ -22,7 +22,7 @@ export const RestaurantOverview = () => {
         <>
             <div className='flex flex-col relative md:flex-row-reverse gap-4'>
                 <aside className='hidden md:block md:w-1/3 lg:w-1/3 border shadow-lg rounded-xl sticky top-0 p-4' style={{ height: "fit-content" }}>
-                    <MapColumn phone="+919295000521" mapLocation={[17.688229266181448, 83.20616323443606]} title="Helapuri Restaurant" address="8-8-36, Main Road, Old Gajuwaka, Vizag"/>
+                    <MapColumn phone="+919295000521" mapLocation={[17.688229266181448, 83.20616323443606]} title="Helapuri Restaurant" address="8-8-36, Main Road, Old Gajuwaka, Vizag" />
                 </aside>
 
                 <div className='lg::w-2/3 md:w-2/3'>
@@ -34,6 +34,11 @@ export const RestaurantOverview = () => {
                         </Link>
                     </div>
                     <MainMenuComponent image="https://b.zmtcdn.com/data/menus/866/18795866/1ac595a49ba62605d60db3642c4bf20b.jpg" name="Menu" pages="2" />
+
+                    <div className='md:hidden border rounded-md py-4 px-2 mt-4'>
+                        <MapColumn phone="+919295000521" mapLocation={[17.688229266181448, 83.20616323443606]} title="Helapuri Restaurant" address="8-8-36, Main Road, Old Gajuwaka, Vizag" />
+                    </div>
+
                     <div className='md:py-6 py-3'>
                         <h2 className='text-lg md:text-xl md:py-1 text-gray-800'>Cuisines</h2>
                         <div className='flex flex-wrap gap-2 py-1'>
@@ -78,10 +83,6 @@ export const RestaurantOverview = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div className='md:hidden border rounded-md py-4 px-2'>
-                    <MapColumn phone="+919295000521" mapLocation={[17.688229266181448, 83.20616323443606]} title="Helapuri Restaurant" address="8-8-36, Main Road, Old Gajuwaka, Vizag"/>
                     </div>
 
                     <div>

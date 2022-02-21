@@ -17,11 +17,11 @@ const ReviewsRestaurant = () => {
                 <div>
                     <h2 className='text-lg md:text-xl text-gray-800'>Rate your experience for</h2>
                 </div>
-                <div className="flex">
-                    <div className="flex items-center gap-2 w-full">
+                <div className="flex gap-8 md:gap-0">
+                    <div className="flex items-center gap-2 md:w-full">
                         <input type="radio" className="bg-zomatoRed-400 w-5 h-5" /> <p className="text-sm md:text-base  text-gray-500">Dining</p>
                     </div>
-                    <div className="flex items-center gap-2 w-full">
+                    <div className="flex items-center gap-2 md:w-full">
                         <input type="radio" className="bg-zomatoRed-400 w-5 h-5" /> <p className="text-sm md:text-base  text-gray-500">Delivery</p>
                     </div>
                 </div>

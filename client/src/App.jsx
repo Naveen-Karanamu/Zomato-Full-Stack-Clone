@@ -5,8 +5,9 @@ import { Route, Redirect } from "react-router-dom";
 import Tab from "./Components/Tabs/Navigator";
 import RestaurantHOC from "./HOC/Restaurant.HOC";
 
-import RestaurantPage from "./Components/Pages/Secondary/Restaurant"
-import RestaurantOverview from "./Components/Pages/Secondary/Restaurant/Overview.Restaurant";
+import RestaurantPage from "./Components/Pages/Secondary/Restaurant/Overview"
+import RestaurantOverview from "./Components/Pages/Secondary/Restaurant/Overview/Overview.Restaurant";
+import OrderOnline from "./Components/Pages/Secondary/Restaurant/Order Online/OrderOnline.page";
 
 
 function App() {
@@ -16,13 +17,13 @@ function App() {
         <Redirect to="/location/delivery"/>
       </Route>
       <Route path="/restaurant/:id" exact>
-        <Redirect to="/restaurant/:id/overview" />
+        <Redirect to="/restaurant/:id/order-online "/>
       </Route>
       
       <LocationHOC path="/location/:tabName" exact component={Tab} />
       <RestaurantHOC path="/restaurant/:id" exact component={RestaurantPage}/>
       <RestaurantHOC path="/restaurant/:id/overview" exact component={RestaurantOverview}/>
-      <RestaurantHOC path="/restaurant/:id/order-online" exact component={RestaurantPage}/>
+      <RestaurantHOC path="/restaurant/:id/order-online" exact component={OrderOnline}/>
       <RestaurantHOC path="/restaurant/:id/reviews" exact component={RestaurantPage}/>
       <RestaurantHOC path="/restaurant/:id/photos" exact component={RestaurantPage}/>
       <RestaurantHOC path="/restaurant/:id/menu" exact component={RestaurantPage}/>
