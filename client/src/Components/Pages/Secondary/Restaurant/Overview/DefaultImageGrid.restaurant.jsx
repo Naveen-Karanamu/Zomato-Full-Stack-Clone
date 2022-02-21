@@ -27,8 +27,8 @@ const DefaultImageGrid = (props) => {
                 <div className="w-1/3 flex h-96 gap-2">
                     <div className="w-full h-full flex flex-col gap-2 ">
                         <div className="h-full overflow-hidden relative">
-                            <div className="transition duration-700 hover:scale-110 h-full">
-                                <img src={props.images[1]} className='w-full h-full object-cover ' />
+                            <div className="transition duration-700 hover:scale-110  h-full">
+                                <img src={props.images[1]}  className='w-full h-full object-cover ' />
                                 <div className="bg-black z-40 w-full h-full absolute  top-0 hidden lg:block hover:bg-transparent opacity-10" />
                             </div>
                         </div>
