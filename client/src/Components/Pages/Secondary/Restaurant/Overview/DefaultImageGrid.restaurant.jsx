@@ -17,17 +17,26 @@ const DefaultImageGrid = (props) => {
             </div>
 
 
-            <div className='hidden md:flex gap-2 lg:container lg:mx-auto lg:px-52 z-10'>
-                <div className='w-2/3 h-96 overflow-hidden'>
-                    <img src={props.images[0]} className='w-full h-full object-cover transition duration-700 hover:scale-110 ' />
+            <div className='hidden md:flex gap-2 lg:container lg:mx-auto lg:px-52 z-10 '>
+                <div className='w-2/3 h-96 overflow-hidden relative '>
+                    <div className="transition duration-700 hover:scale-110 h-full">
+                        <img src={props.images[0]} className='w-full h-full object-cover   z-20' />
+                        <div className="bg-black z-40 w-full h-full absolute  top-0 hidden lg:block hover:bg-transparent opacity-10" />
+                    </div>
                 </div>
                 <div className="w-1/3 flex h-96 gap-2">
                     <div className="w-full h-full flex flex-col gap-2 ">
-                        <div className="h-full overflow-hidden">
-                            <img src={props.images[1]} className='w-full h-full object-cover transition duration-700 hover:scale-110 ' />
+                        <div className="h-full overflow-hidden relative">
+                            <div className="transition duration-700 hover:scale-110 h-full">
+                                <img src={props.images[1]} className='w-full h-full object-cover ' />
+                                <div className="bg-black z-40 w-full h-full absolute  top-0 hidden lg:block hover:bg-transparent opacity-10" />
+                            </div>
                         </div>
-                        <div className="h-full overflow-hidden">
-                            <img src={props.images[2]} className='w-full h-full object-cover transition duration-700 hover:scale-110 ' />
+                        <div className="h-full overflow-hidden relative">
+                            <div className="h-full transition duration-700 hover:scale-110">
+                                <img src={props.images[2]} className='w-full h-full object-cover  ' />
+                                <div className="bg-black z-40 w-full h-full absolute  top-0 hidden lg:block hover:bg-transparent opacity-10" />
+                            </div>
                         </div>
                     </div>
                     <div className="w-full h-full flex flex-col gap-2">
