@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactStars from "react-rating-stars-component";
 
 // Icons
@@ -10,7 +10,13 @@ import { TiArrowForwardOutline } from "react-icons/ti"
 
 
 const ReviewsRestaurant = () => {
-    
+    const [isActive, setIsActive] = useState("");
+
+    const like = () => {
+        setIsActive(1);
+        return;
+    }
+
     return (
         <>
             <div className="flex flex-col gap-1 md:gap-2">
@@ -74,7 +80,12 @@ const ReviewsRestaurant = () => {
 
                 <div className="flex gap-8 py-1 justify-between md:justify-start">
                     <div className="text-gray-400 flex gap-1 items-center hover:bg-gray-100 md:px-1 rounded md:py-2" >
-                        <AiOutlineLike className="w-5 h-5 "/>
+                        <div onClick={like}>
+                            
+                            {
+                                isActive ==1 ? <AiFillLike className="w-5 h-5 text-zomatoRed-300" /> :<AiOutlineLike className="w-5 h-5 " />
+                            }
+                        </div>
                         <span className="text-sm md:text-base ">Helpful</span>
                     </div>
                     <div className="text-gray-400 flex gap-1 items-center hover:bg-gray-100 md:px-1 rounded md:py-2">

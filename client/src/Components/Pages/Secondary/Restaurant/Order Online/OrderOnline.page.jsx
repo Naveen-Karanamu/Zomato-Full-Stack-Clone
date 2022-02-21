@@ -7,7 +7,9 @@ export const OrderOnline = () => {
     <>
       <div className='w-full md:w-1/4 '>
         <div className='hidden md:block'>
+          <aside>
           <MenuList />
+          </aside>
         </div>
         <div className='w-full'>
           <FloatMenuSm />
