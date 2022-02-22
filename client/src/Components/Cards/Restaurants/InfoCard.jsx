@@ -6,7 +6,7 @@ import { AiFillStar } from "react-icons/ai"
 export const InfoCard  = (props) => {
     return (
       <>
-        <div className="lg:mx-3 mx-1">
+        <div className="lg:mx-3 mx-1 ">
           <div>
             <img src={props.image} alt="info image" className='w-full  rounded-lg object-cover h-32 md:h-52' />
           </div>

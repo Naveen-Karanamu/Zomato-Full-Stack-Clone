@@ -99,7 +99,7 @@ export default function ReviewModel({ isOpen, setIsOpen,handleRating, ...props }
 
                                     <div className='flex flex-col md:gap-4'>
                                         <h4 className='text-base md:text-xl text-gray-600'>What did you like? 😃</h4>
-                                        <input type="text" placeholder='Search tag or select from below' className='border border-gray-300 md:p-3 p-2 w-full md:rounded-lg rounded' />
+                                        <input type="text" placeholder='Search tag or select from below' className='border border-gray-300 md:p-3 p-2 w-full md:rounded-lg rounded shadow-md focus:outline-none text-gray-700' />
                                         <div className='flex gap-2 items-center pt-2 flex-wrap'>
                                         {
                                             liked.map((like)=>(
@@ -110,7 +110,7 @@ export default function ReviewModel({ isOpen, setIsOpen,handleRating, ...props }
                                     </div>
                                     <div className='flex flex-col md:gap-4 md:pt-4 pt-2'>
                                         <h4 className='text-base md:text-xl text-gray-600'>What did you not like? 🤔</h4>
-                                        <input type="text" placeholder='Search tag or select from below' className='border border-gray-300 md:p-3 p-2 w-full md:rounded-lg rounded' />
+                                        <input type="text" placeholder='Search tag or select from below' className='border border-gray-300 md:p-3 p-2 w-full md:rounded-lg rounded shadow-md focus:outline-none text-gray-700' />
                                         <div className='flex gap-2 items-center pt-2 flex-wrap'>
                                         {
                                             liked.map((like)=>(
