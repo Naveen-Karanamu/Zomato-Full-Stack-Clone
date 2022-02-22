@@ -19,39 +19,9 @@ const ReviewsRestaurant = () => {
 
     return (
         <>
-            <div className="flex flex-col gap-1 md:gap-2">
-                <div>
-                    <h2 className='text-lg md:text-xl text-gray-800'>Rate your experience for</h2>
-                </div>
-                <div className="flex gap-8 md:gap-0 z-10">
-                    <div className="flex items-center gap-2 md:w-full">
-                        <input type="radio" name="review" id="dining" className="bg-zomatoRed-400 w-5 h-5" /> 
-                        <label htmlFor="dining" className="text-sm md:text-base  text-gray-500">Dining</label>
-                    </div>
-                    <div className="flex items-center gap-2 md:w-full">
-                        <input type="radio" id="delivery" className="bg-zomatoRed-400 w-5 h-5" />
-                        <label htmlFor="delivery" className= "text-sm md:text-base  text-gray-500">Delivery</label>
-                    </div>
-                </div>
-                <div className=" ">
-                    <ReactStars
-                        count={5}
-                        size={24}
-                        isHalf={true}
-                        emptyIcon={<IoStarOutline />}
-                        halfIcon={<IoStarHalf />}
-                        fullIcon={<IoStarSharp />}
-                        activeColor="#ffd700"
-                    />
-                </div>
-                <div>
-                    <h1 className="text-md md:text-lg text-zomatoRed-300">Write a Review</h1>
-                </div>
-            </div>
+            
 
-            <hr className='mt-4 pb-8' />
-
-            <div >
+            <div className="md:py-4 py-2">
                 <div className="flex justify-between items-center">
                     <div className="flex gap-2 items-center">
                         <div className="w-11 h-11 rounded-full">
