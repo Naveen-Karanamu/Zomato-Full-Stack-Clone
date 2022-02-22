@@ -12,7 +12,7 @@ export const MenuImages = (props) => {
 
     return (
         <>
-            <div className=" z-auto">
+            <div className="">
 
                 {isMenuOpen && (
                     <ImageViewer
