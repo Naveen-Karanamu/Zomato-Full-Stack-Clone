@@ -71,13 +71,9 @@ export const OrderOnline = () => {
                 <h2 className='text-xl  py-4 text-gray-800 md:text-black md:font-medium md:text-2xl'>Recommended</h2>
               </div>
               <div className='flex flex-col gap-10'>
-                <FoodComponent />
-                <FoodComponent />
-                <FoodComponent />
-                <FoodComponent />
-                <FoodComponent />
-                <FoodComponent />
-                <FoodComponent />
+                <FoodComponent 
+                image="https://b.zmtcdn.com/data/dish_photos/75f/3130b3af489703c3d850118409b8775f.jpg" title="Chicken Double Joint Biriyani" price="250" rating="3.5"
+                />
               </div>
             </div>
           </div>
