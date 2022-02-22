@@ -25,10 +25,12 @@ const ReviewsRestaurant = () => {
                 </div>
                 <div className="flex gap-8 md:gap-0">
                     <div className="flex items-center gap-2 md:w-full">
-                        <input type="radio" className="bg-zomatoRed-400 w-5 h-5" /> <p className="text-sm md:text-base  text-gray-500">Dining</p>
+                        <input type="radio" name="review" id="dining" className="bg-zomatoRed-400 w-5 h-5" /> 
+                        <label htmlFor="dining" className="text-sm md:text-base  text-gray-500">Dining</label>
                     </div>
                     <div className="flex items-center gap-2 md:w-full">
-                        <input type="radio" className="bg-zomatoRed-400 w-5 h-5" /> <p className="text-sm md:text-base  text-gray-500">Delivery</p>
+                        <input type="radio" id="delivery" className="bg-zomatoRed-400 w-5 h-5" />
+                        <label htmlFor="delivery" className= "text-sm md:text-base  text-gray-500">Delivery</label>
                     </div>
                 </div>
                 <div className=" ">
