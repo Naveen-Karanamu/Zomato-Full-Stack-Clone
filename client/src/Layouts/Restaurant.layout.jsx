@@ -1,13 +1,18 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom';
+
 // Componrnts 
 import ResNavbar from '../Components/Navbar/Restaurant.navbar';
 import DefaultImageGrid from '../Components/Pages/Secondary/Restaurant/Overview/DefaultImageGrid.restaurant';
 import ResInfo from '../Components/Pages/Secondary/Restaurant/Overview/Info.restaurant';
+import MapRestaruant from '../Components/Pages/Secondary/Restaurant/Overview/MapRestaruant';
 import RestaurantOverview from '../Components/Pages/Secondary/Restaurant/Overview/Overview.Restaurant';
 import TabsContainer from '../Components/Tabs/Restaurant.tabs';
 
 
 export const RestaurantLayout = (props) => {
+    const location = useLocation();
+    const currentPath = location.pathname.includes("overview");
 
 
     return (
@@ -22,9 +27,14 @@ export const RestaurantLayout = (props) => {
                     <ResInfo />
                     <div className="lg:container lg:mx-auto lg:px-52 px-4 ">
                         <TabsContainer />
-                    <hr className='border-gray-300 md:my-6 border' />
+                        <hr className='border-gray-300 md:my-6 border' />
                     </div>
                 </div>
+                    {
+                        currentPath && <div className=' flex-row-reverse lg:container lg:mx-auto lg:px-52 bg-transparent bg-none hidden md:flex sticky top-80 z-30' >
+                            <MapRestaruant />
+                        </div>
+                    }
 
                 <div className="lg:container lg:mx-auto lg:px-52 px-4 md:pb-4">
                     {props.children}
