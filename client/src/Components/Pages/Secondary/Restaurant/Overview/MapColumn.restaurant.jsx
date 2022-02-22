@@ -14,7 +14,7 @@ export const MapColumn = (props) => {
                     <h1 className='md:text-xl text-lg text-gray-700 font-normal  md:block md:pb-1'>Call</h1>
                     <p className='md:text-md text-sm text-zomatoRed-300'>{props.phone}</p>
                 </div>
-                <div className='md:pt-4 pt-2'>
+                <div className='lg:pt-4 pt-2'>
                     <h1 className='text-lg md:text-xl font-normal text-gray-700  md:block '>Direction</h1>
                 </div>
                 <div className='w-full md:h-36 h-48 my-1 '>
