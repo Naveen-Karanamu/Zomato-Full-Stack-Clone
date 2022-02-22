@@ -7,6 +7,7 @@ import MenuList from "./MenuList"
 import { AiOutlinePlus, AiOutlineCompass, AiOutlineClockCircle } from "react-icons/ai"
 import { MdOutlineDone } from "react-icons/md"
 import { RiSearchLine } from "react-icons/ri"
+import FoodList from './FoodList';
 
 export const OrderOnline = () => {
   return (
@@ -65,15 +66,15 @@ export const OrderOnline = () => {
                 <div className='flex gap-2 items-center pt-2 md:pt-0'>
                   <input type="checkbox" className='w-4 h-4 ' /> <p>veg only</p>
                 </div>
-                  <RiSearchLine className='text-gray-400 w-6 h-6' />
+                <RiSearchLine className='text-gray-400 w-6 h-6' />
               </div>
               <div>
-                <h2 className='text-xl  py-4 text-gray-800 md:text-black md:font-medium md:text-2xl'>Recommended</h2>
+
               </div>
-              <div className='flex flex-col gap-10'>
-                <FoodComponent 
-                image="https://b.zmtcdn.com/data/dish_photos/75f/3130b3af489703c3d850118409b8775f.jpg" title="Chicken Double Joint Biriyani" price="250" rating="3.5"
-                />
+              <div>
+                <FoodList category="Recommended" items={[{
+                  image:"https://b.zmtcdn.com/data/dish_photos/75f/3130b3af489703c3d850118409b8775f.jpg", title:"Chicken Double Joint Biriyani", price:"250", rating:"3.5"
+                },]} />
               </div>
             </div>
           </div>
