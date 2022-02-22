@@ -16,10 +16,6 @@ export const OrderOnline = () => {
         <div className='hidden md:block md:w-1/4 w-full'>
           <aside className='flex flex-col gap-1'>
             <MenuList />
-            <MenuList />
-            <MenuList />
-            <MenuList />
-            <MenuList />
           </aside>
         </div>
 
@@ -75,6 +71,12 @@ export const OrderOnline = () => {
                 <h2 className='text-xl  py-4 text-gray-800 md:text-black md:font-medium md:text-2xl'>Recommended</h2>
               </div>
               <div className='flex flex-col gap-10'>
+                <FoodComponent />
+                <FoodComponent />
+                <FoodComponent />
+                <FoodComponent />
+                <FoodComponent />
+                <FoodComponent />
                 <FoodComponent />
               </div>
             </div>

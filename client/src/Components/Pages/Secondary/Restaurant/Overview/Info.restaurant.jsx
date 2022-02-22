@@ -53,7 +53,7 @@ const ResInfoSm = () => {
 const RestInfoMd = () => {
     return (
         <>
-            <div className="px-3 lg:container lg:mx-auto lg:px-52 lg:py-2">
+            <div className="px-3 lg:container lg:mx-auto lg:px-52 lg:py-2 ">
                 <div className="flex flex-col  gap-1">
                     <div className="flex justify-between items-center">
                         <h1 className="text-4xl">Helapuri Restaurant</h1>
@@ -99,7 +99,7 @@ const ResInfo = () => {
     return (
         <>
             <div className="md:hidden"><ResInfoSm /></div>
-            <div className="hidden md:block lg:hidde"><RestInfoMd /></div>
+            <div className="hidden md:block"><RestInfoMd /></div>
         </>
     )
 }
