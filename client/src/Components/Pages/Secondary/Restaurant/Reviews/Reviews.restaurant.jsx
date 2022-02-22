@@ -8,6 +8,9 @@ export const ReviewsPage = () => {
     return (
         <>
             <div className='md:flex gap-4'>
+                <div className='md:hidden'>
+                    <AddReviewCard />
+                </div>
                 <div className='md:w-2/3'>
                     {
                         reviews.map((review) => (
@@ -17,7 +20,7 @@ export const ReviewsPage = () => {
                         ))
                     }
                 </div>
-                <AddReviewCard /> 
+                <AddReviewCard />
             </div>
         </>
     )
