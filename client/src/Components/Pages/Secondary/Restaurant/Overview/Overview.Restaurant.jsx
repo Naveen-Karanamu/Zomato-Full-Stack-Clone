@@ -20,7 +20,7 @@ export const RestaurantOverview = () => {
 
     return (
         <>
-            <div className='flex flex-col  md:flex-row-reve gap-2 bg-white -z-10'>
+            <div className='flex flex-col  md:flex-row-revers gap-2 bg-white -z-10'>
                 {/* <aside className='hidden md:block md:w-1/3 lg:w-1/3 border shadow-lg rounded-xl sticky top-0 p-4' style={{ height: "fit-content" }}>
                     <MapColumn phone="+919295000521" mapLocation={[17.688229266181448, 83.20616323443606]} title="Helapuri Restaurant" address="8-8-36, Main Road, Old Gajuwaka, Vizag" />
                 </aside> */}

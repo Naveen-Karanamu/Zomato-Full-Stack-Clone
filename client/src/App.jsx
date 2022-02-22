@@ -8,6 +8,7 @@ import RestaurantHOC from "./HOC/Restaurant.HOC";
 import RestaurantPage from "./Components/Pages/Secondary/Restaurant/Overview"
 import RestaurantOverview from "./Components/Pages/Secondary/Restaurant/Overview/Overview.Restaurant";
 import OrderOnline from "./Components/Pages/Secondary/Restaurant/Order Online/OrderOnline.page";
+import Temp from "./Components/Pages/Secondary/Restaurant/temp";
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
       
       <LocationHOC path="/location/:tabName" exact component={Tab} />
       <RestaurantHOC path="/restaurant/:id" exact component={RestaurantPage}/>
-      <RestaurantHOC path="/restaurant/:id/overview" exact component={RestaurantOverview}/>
+      <RestaurantHOC path="/restaurant/:id/overview" exact component={Temp}/>
       <RestaurantHOC path="/restaurant/:id/order-online" exact component={OrderOnline}/>
       <RestaurantHOC path="/restaurant/:id/reviews" exact component={RestaurantPage}/>
       <RestaurantHOC path="/restaurant/:id/photos" exact component={RestaurantPage}/>

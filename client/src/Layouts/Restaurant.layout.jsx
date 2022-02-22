@@ -30,13 +30,19 @@ export const RestaurantLayout = (props) => {
                         <hr className='border-gray-300 md:my-6 border' />
                     </div>
                 </div>
-                    {
-                        currentPath && <div className=' flex-row-reverse lg:container lg:mx-auto lg:px-52 bg-transparent bg-none hidden md:flex sticky top-80 z-30' >
+                {
+                    currentPath &&
+                    <div>
+                        <div className=' flex-row-reverse lg:container lg:mx-auto lg:px-52 bg-transparent bg-none hidden md:flex sticky top-80 z-30' >
                             <MapRestaruant />
                         </div>
-                    }
+                        <div className='lg:container lg:mx-auto lg:px-52 -mt-96 pt-4'>
+                            <RestaurantOverview />
+                        </div>
+                    </div>
+                }
 
-                <div className="lg:container lg:mx-auto lg:px-52 px-4 md:pb-4">
+                <div className="lg:container lg:mx-auto lg:px-52 px-4 md:pb-4 ">
                     {props.children}
                 </div>
 
