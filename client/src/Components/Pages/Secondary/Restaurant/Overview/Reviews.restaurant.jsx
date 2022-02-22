@@ -23,7 +23,7 @@ const ReviewsRestaurant = () => {
                 <div>
                     <h2 className='text-lg md:text-xl text-gray-800'>Rate your experience for</h2>
                 </div>
-                <div className="flex gap-8 md:gap-0">
+                <div className="flex gap-8 md:gap-0 z-10">
                     <div className="flex items-center gap-2 md:w-full">
                         <input type="radio" name="review" id="dining" className="bg-zomatoRed-400 w-5 h-5" /> 
                         <label htmlFor="dining" className="text-sm md:text-base  text-gray-500">Dining</label>

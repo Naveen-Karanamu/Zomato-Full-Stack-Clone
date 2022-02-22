@@ -33,10 +33,10 @@ export const RestaurantLayout = (props) => {
                 {
                     currentPath &&
                     <div>
-                        <div className=' flex-row-reverse lg:container lg:mx-auto lg:px-52 bg-transparent bg-none hidden md:flex sticky top-80 z-30' >
+                        <div className=' flex-row-reverse lg:container lg:mx-auto lg:px-52 bg-transparent bg-none hidden md:flex sticky top-80 ' >
                             <MapRestaruant />
                         </div>
-                        <div className='lg:container lg:mx-auto lg:px-52 -mt-96 pt-4'>
+                        <div className='lg:container lg:mx-auto lg:px-52 -mt-96 pt-4 '>
                             <RestaurantOverview />
                         </div>
                     </div>
