@@ -11,6 +11,7 @@ import OrderOnline from "./Components/Pages/Secondary/Restaurant/Order Online/Or
 import Temp from "./Components/Pages/Secondary/Restaurant/temp";
 import ReviewsPage from "./Components/Pages/Secondary/Restaurant/Reviews/Reviews.restaurant";
 import MenuPage from "./Components/Pages/Secondary/Restaurant/Menu/MenuPage";
+import PhotosPage from "./Components/Pages/Secondary/Restaurant/Photos/Photos.page";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
       <RestaurantHOC path="/restaurant/:id/overview" exact component={Temp}/>
       <RestaurantHOC path="/restaurant/:id/order-online" exact component={OrderOnline}/>
       <RestaurantHOC path="/restaurant/:id/reviews" exact component={ReviewsPage}/>
-      <RestaurantHOC path="/restaurant/:id/photos" exact component={RestaurantPage}/>
+      <RestaurantHOC path="/restaurant/:id/photos" exact component={PhotosPage}/>
       <RestaurantHOC path="/restaurant/:id/menu" exact component={MenuPage}/>
     </>
   );
