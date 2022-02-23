@@ -8,6 +8,7 @@ import { AiOutlinePlus, AiOutlineCompass, AiOutlineClockCircle } from "react-ico
 import { MdOutlineDone } from "react-icons/md"
 import { RiSearchLine } from "react-icons/ri"
 import FoodList from './FoodList';
+import CartContainer from './Cart/CartContainer';
 
 export const OrderOnline = () => {
   return (
@@ -21,7 +22,7 @@ export const OrderOnline = () => {
         </div>
 
         <div className='w-full md:w-3/4  md:border-l border-gray-300 h-48 md:pl-4'>
-          <div>
+          <div className=''> 
             <FloatMenuSm />
           </div>
           <div >
@@ -73,13 +74,15 @@ export const OrderOnline = () => {
               </div>
               <div>
                 <FoodList category="Recommended" items={[{
-                  image:"https://b.zmtcdn.com/data/dish_photos/75f/3130b3af489703c3d850118409b8775f.jpg", title:"Chicken Double Joint Biriyani", price:"250", rating:"3.5"
+                  image: "https://b.zmtcdn.com/data/dish_photos/75f/3130b3af489703c3d850118409b8775f.jpg", title: "Chicken Double Joint Biriyani", price: "250", rating: "3.5"
                 },]} />
               </div>
             </div>
           </div>
         </div>
-
+        <div>
+          <CartContainer />
+        </div>
       </div>
     </>
   )
