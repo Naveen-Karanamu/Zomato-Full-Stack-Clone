@@ -5,8 +5,9 @@ import { FiSearch } from "react-icons/fi"
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io"
 import { HiArrowLeft } from "react-icons/hi"
 import SignIn from "../Auth/SignIn";
+import SignUp from "../Auth/SignUp";
 
-const ResNavSm = ({signIn}) => {
+const ResNavSm = ({signIn, signUp}) => {
     return (
         <div>
             <div className="bg-white px-4 py-3 flex justify-between items-center shadow-md">
@@ -31,7 +32,7 @@ const ResNavSm = ({signIn}) => {
     )
 }
 
-const ResNavMd = ({signIn}) => {
+const ResNavMd = ({signIn, signUp}) => {
     return (
         <div>
             <div className="flex justify-between px-2 py-4 items-center shadow-sm">
@@ -40,7 +41,7 @@ const ResNavMd = ({signIn}) => {
                 </div>
                 <div className="flex gap-4">
                     <button className="text-gray-400 text-xl" onClick={signIn}>Log in</button>
-                    <button className="text-gray-400 text-xl">Sign up</button>
+                    <button className="text-gray-400 text-xl" onClick={signUp}>Sign up</button>
                 </div>
             </div>
             <div>
@@ -62,7 +63,7 @@ const ResNavMd = ({signIn}) => {
     )
 }
 
-const ResNavLg = ({signIn}) => {
+const ResNavLg = ({signIn, signUp}) => {
     return (
         <>
             <div className="container mx-auto px-52 flex w-full items-center justify-between my-3">
@@ -86,7 +87,7 @@ const ResNavLg = ({signIn}) => {
                 </div>
                 <div className="flex gap-8">
                     <button className="text-gray-400 text-xl hover:text-gray-600" onClick={signIn}>Log in</button>
-                    <button className="text-gray-400 text-xl hover:text-gray-600">Sign up</button>
+                    <button className="text-gray-400 text-xl hover:text-gray-600" onClick={signUp}>Sign up</button>
                 </div>
             </div>
         </>
@@ -102,10 +103,11 @@ const ResNavbar = () => {
     return (
         <>
         <SignIn isOpen={openSignIn} setIsOpen={setOpenSignIn}/>
+        <SignUp isOpen={openSignUp} setIsOpen={setOpenSignUp}/>
             <nav>
-                <div className="md:hidden"><ResNavSm signIn={openSignInModel} /></div>
-                <div className="hidden md:block lg:hidden"><ResNavMd signIn={openSignInModel} /></div>
-                <div className="hidden lg:block"><ResNavLg signIn={openSignInModel} /></div>
+                <div className="md:hidden"><ResNavSm signIn={openSignInModel} signUp={openSignUpModel}/></div>
+                <div className="hidden md:block lg:hidden"><ResNavMd signIn={openSignInModel} signUp={openSignUpModel}/></div>
+                <div className="hidden lg:block"><ResNavLg signIn={openSignInModel} signUp={openSignUpModel}/></div>
             </nav>
         </>
 
