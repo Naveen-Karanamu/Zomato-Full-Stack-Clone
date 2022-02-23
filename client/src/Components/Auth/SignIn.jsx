@@ -50,39 +50,40 @@ export default function SignIn({ isOpen, setIsOpen }) {
                             leaveFrom="opacity-100 scale-100"
                             leaveTo="opacity-0 scale-95"
                         >
-                            <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+                            <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-lg">
                                 <Dialog.Title
                                     as="h3"
-                                    className="text-lg font-medium leading-6 text-gray-900"
+                                    className="text-3xl font-medium leading-6 text-gray-700 pb-10"
                                 >
-
+                                    Log In
                                 </Dialog.Title>
                                 <div className="mt-2 flex flex-col gap-4">
 
-                                    <form className='flex flex-col gap-6'>
+                                    <form className='flex flex-col gap-5'>
                                         <div className="flex  items-center gap-3 ">
-                                            <input type="email" name="review" placeholder='Enter the e-mail or phone number' id="email" className=" bg-white border border-gray-400 py-3 w-full  rounded-lg text-lg px-6" />
+                                            <input type="email" name="review" placeholder='Enter the e-mail or phone number' id="email" className=" bg-white border border-gray-400 py-2 w-full  rounded-lg md:text-lg px-6" />
 
                                         </div>
                                         <div className="flex items-center gap-3  ">
-                                            <input type="password" name="review" placeholder='Enter the Password' id="password" className="bg-white border border-gray-400 py-3 w-full  rounded-lg text-lg px-6" />
+                                            <input type="password" name="review" placeholder='Enter the Password' id="password" className="bg-white border border-gray-400 py-2 w-full  rounded-lg md:text-lg px-6" />
 
                                         </div>
 
                                         <div className='flex items-center justify-center'>
-                                            <div className=' bg-zomatoRed-300 text-white py-2 rounded-lg  w-32 text-center hover:cursor-pointer'>
+                                            <div className=' bg-zomatoRed-300 text-white py-2 rounded-lg  w-full text-center hover:cursor-pointer'>
                                                 Sign in
                                             </div>
                                         </div>
                                     </form>
                                     <div className='flex items-center gap-2 overflow-x-hidden '>
-                                        <span className='text-gray-300 -mt-2'>___________________________</span>
+                                        <span className='hidden md:block text-gray-300 -mt-2 md:w-full'>___________________________</span>
+                                        <span className='md:hidden text-gray-300 -mt-2 md:w-full'>_____________________</span>
                                         <span className='text-lg text-gray-400'>or</span>
-                                        <span className='text-gray-300 -mt-2'>_____________________________</span>
+                                        <span className='text-gray-300 -mt-2 w-1/2'>_____________________________</span>
                                     </div>
-                                    <button className='flex justify-center items-center gap-2 bg-white border border-gray-400 py-3  rounded-lg hover:bg-gray-100 w-full text-center text-xl text-gray-500 '> <FcGoogle className='w-8 h-8' /> Sign in with Google</button>
+                                    <button className='flex justify-center items-center gap-2 bg-white border border-gray-400 py-2  rounded-lg hover:bg-gray-100 w-full text-center text-lg md:text-xl text-gray-500 '> <FcGoogle className='w-8 h-8' /> Continue with Google</button>
 
-                                    <div className='text-lg text-gray-500'>
+                                    <div className='md:text-lg text-gray-500'>
                                         New to Zomato? <span className='text-zomatoRed-300 hover:cursor-pointer' onClick={closeModal}>Create account</span>
                                     </div>
 

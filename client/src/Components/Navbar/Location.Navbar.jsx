@@ -7,8 +7,9 @@ import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io"
 // Components
 import SignIn from "../Auth/SignIn";
 import UserDropDown from "../Auth/DropDown";
+import SignUp from "../Auth/SignUp";
 
-const NavSm = ({signIn}) => {
+const NavSm = ({signIn,signUp}) => {
     return (
         <div>
             <div className="bg-white px-4 py-3 flex justify-between items-center shadow-md">
@@ -33,7 +34,7 @@ const NavSm = ({signIn}) => {
     )
 }
 
-const NavMd = ({signIn}) => {
+const NavMd = ({signIn,signUp}) => {
     return (
         <div>
             <div className="flex justify-between px-2 py-4 items-center shadow-sm">
@@ -42,7 +43,7 @@ const NavMd = ({signIn}) => {
                 </div>
                 <div className="flex gap-4">
                     <button className="text-gray-400 text-xl" onClick={signIn}>Log in</button>
-                    <button className="text-gray-400 text-xl">Sign up</button>
+                    <button className="text-gray-400 text-xl" onClick={signUp}>Sign up</button>
                 </div>
             </div>
             <div>
@@ -64,7 +65,7 @@ const NavMd = ({signIn}) => {
     )
 }
 
-const NavLg = ({signIn}) => {
+const NavLg = ({signIn,signUp}) => {
     return (
         <>
             <div className="container mx-auto px-52 flex w-full items-center justify-between my-3">
@@ -88,7 +89,7 @@ const NavLg = ({signIn}) => {
                 </div>
                 <div className="flex gap-8">
                     <button className="text-gray-400 text-xl hover:text-gray-600" onClick={signIn}>Log in</button>
-                    <button className="text-gray-400 text-xl hover:text-gray-600">Sign up</button>
+                    <button className="text-gray-400 text-xl hover:text-gray-600" onClick={signUp}>Sign up</button>
                 </div>
             </div>
         </>
@@ -100,13 +101,15 @@ const Navbar = () => {
     const [openSignUp, setOpenSignUp] = useState(false);
 
     const openSignInModel=()=>setOpenSignIn(true);
+    const openSignUpModel=()=>setOpenSignUp(true);
     return (
         <>
         <SignIn isOpen={openSignIn} setIsOpen={setOpenSignIn} />
+        <SignUp isOpen={openSignUp} setIsOpen={setOpenSignUp}/>
             <nav>
-                <div className="md:hidden"><NavSm signIn={openSignInModel}/></div>
-                <div className="hidden md:block lg:hidden"><NavMd signIn={openSignInModel}/></div>
-                <div className="hidden lg:block"><NavLg signIn={openSignInModel}/></div>
+                <div className="md:hidden"><NavSm signIn={openSignInModel} signUp={openSignUpModel}/></div>
+                <div className="hidden md:block lg:hidden"><NavMd signIn={openSignInModel} signUp={openSignUpModel}/></div>
+                <div className="hidden lg:block"><NavLg signIn={openSignInModel} signUp={openSignUpModel}/></div>
             </nav>
         </>
     )
