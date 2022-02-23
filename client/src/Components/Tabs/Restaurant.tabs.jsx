@@ -38,15 +38,16 @@ export const TabsContainer = () => {
             isActive: currentPath.includes("reviews")
         },
         {
-            title: "Menu",
-            route: "menu",
-            isActive: currentPath.includes("menu")
-        },
-        {
             title: "Photos",
             route: "photos",
             isActive: currentPath.includes("photos")
         },
+        {
+            title: "Menu",
+            route: "menu",
+            isActive: currentPath.includes("menu")
+        }
+        
     ]
     return (
         <>
