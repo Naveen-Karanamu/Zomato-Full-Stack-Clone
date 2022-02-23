@@ -45,7 +45,7 @@ const CartContainer =()=>{
     <>
     <div className='md:hidden'><CartContainerSm /></div>
     <div className='hidden md:block'><CartContainerMd /></div>
-    <div className='fixed w-full z-40 bg-white bottom-20 left-0 h-64 p-6'>
+    <div className='fixed w-full z-40 bg-white bottom-20 left-0 h-64 p-6 lg:container lg:mx-auto lg:px-52'>
       <CartItems />
     </div>
     </>
