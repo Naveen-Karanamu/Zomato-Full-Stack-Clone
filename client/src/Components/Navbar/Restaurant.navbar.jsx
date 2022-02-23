@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaUserAlt } from "react-icons/fa"
 import { HiLocationMarker } from "react-icons/hi"
 import { FiSearch } from "react-icons/fi"
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io"
 import { HiArrowLeft } from "react-icons/hi"
+import SignIn from "../Auth/SignIn";
 
-const ResNavSm = () => {
+const ResNavSm = ({signIn}) => {
     return (
         <div>
             <div className="bg-white px-4 py-3 flex justify-between items-center shadow-md">
@@ -18,19 +19,19 @@ const ResNavSm = () => {
 
                 <div className="flex items-center gap-2">
                     <button className="bg-zomatoRed-400 rounded-full py-2 px-2 text-white text-sm font-semibold">Use App</button>
-                    <span className="border-2 border-gray-300  rounded-full text-zomatoRed-400"><FaUserAlt className="w-4 h-4 m-2" /></span>
+                    <span className="border-2 border-gray-300  rounded-full text-zomatoRed-400"><FaUserAlt className="w-4 h-4 m-2" onClick={signIn}/></span>
                 </div>
             </div>
 
             <div className="flex gap-3 px-5 my-3 mx-2 rounded-full py-3 items-center border shadow-sm  ">
-                <FiSearch  className="text-gray-500 w-5 h-5"/>
+                <FiSearch className="text-gray-500 w-5 h-5" />
                 <input type="search" placeholder="Search for restaurants, cuisine or a dish " className="focus:outline-none w-full" />
             </div>
         </div>
     )
 }
 
-const ResNavMd = () => {
+const ResNavMd = ({signIn}) => {
     return (
         <div>
             <div className="flex justify-between px-2 py-4 items-center shadow-sm">
@@ -38,7 +39,7 @@ const ResNavMd = () => {
                     <img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png?fit=around|198:42&crop=198:42;*,*" alt="logo" className="w-full h-full" />
                 </div>
                 <div className="flex gap-4">
-                    <button className="text-gray-400 text-xl">Log in</button>
+                    <button className="text-gray-400 text-xl" onClick={signIn}>Log in</button>
                     <button className="text-gray-400 text-xl">Sign up</button>
                 </div>
             </div>
@@ -61,7 +62,7 @@ const ResNavMd = () => {
     )
 }
 
-const ResNavLg = () => {
+const ResNavLg = ({signIn}) => {
     return (
         <>
             <div className="container mx-auto px-52 flex w-full items-center justify-between my-3">
@@ -84,7 +85,7 @@ const ResNavLg = () => {
                     </div>
                 </div>
                 <div className="flex gap-8">
-                    <button className="text-gray-400 text-xl hover:text-gray-600">Log in</button>
+                    <button className="text-gray-400 text-xl hover:text-gray-600" onClick={signIn}>Log in</button>
                     <button className="text-gray-400 text-xl hover:text-gray-600">Sign up</button>
                 </div>
             </div>
@@ -93,12 +94,21 @@ const ResNavLg = () => {
 }
 
 const ResNavbar = () => {
+    const [openSignIn, setOpenSignIn] = useState(false)
+    const [openSignUp, setOpenSignUp] = useState(false)
+
+    const openSignInModel = () => setOpenSignIn(true)
+    const openSignUpModel = () => setOpenSignUp(true)
     return (
-        <nav>
-            <div className="md:hidden"><ResNavSm /></div>
-            <div className="hidden md:block lg:hidden"><ResNavMd /></div>
-            <div className="hidden lg:block"><ResNavLg /></div>
-        </nav>
+        <>
+        <SignIn isOpen={openSignIn} setIsOpen={setOpenSignIn}/>
+            <nav>
+                <div className="md:hidden"><ResNavSm signIn={openSignInModel} /></div>
+                <div className="hidden md:block lg:hidden"><ResNavMd signIn={openSignInModel} /></div>
+                <div className="hidden lg:block"><ResNavLg signIn={openSignInModel} /></div>
+            </nav>
+        </>
+
     )
 }
 
