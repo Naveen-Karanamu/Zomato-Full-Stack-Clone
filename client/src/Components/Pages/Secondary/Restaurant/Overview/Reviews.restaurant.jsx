@@ -12,10 +12,7 @@ import { TiArrowForwardOutline } from "react-icons/ti"
 const ReviewsRestaurant = () => {
     const [isActive, setIsActive] = useState("");
 
-    const like = () => {
-        setIsActive(1);
-        return;
-    }
+    const like = () => setIsActive((prev)=>!prev)
 
     return (
         <>
