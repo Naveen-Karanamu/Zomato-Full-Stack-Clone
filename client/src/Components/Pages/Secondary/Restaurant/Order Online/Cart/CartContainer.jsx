@@ -15,7 +15,7 @@ const CartContainerSm = ({ toggle, isOpen }) => {
         <div className='flex flex-col text-gray-600' onClick={toggle}>
           <p className='flex itms-center gap-1'>1 item
             {
-              isOpen ? <IoMdArrowDropup className='w-5 h-5' /> : <IoMdArrowDropdown className='w-5 h-5' />
+              !isOpen ? <IoMdArrowDropup className='w-5 h-5' /> : <IoMdArrowDropdown className='w-5 h-5' />
             }
           </p>
           <p>₹250 (plus taxes)</p>
@@ -36,7 +36,7 @@ const CartContainerMd = ({ toggle, isOpen }) => {
           <div className='flex items-center gap-3 '>
             <span className='border border-gray-300 rounded p-1' onClick={toggle}>
               {
-                isOpen ? <IoMdArrowDropup className='w-5 h-5' /> : <IoMdArrowDropdown className='w-5 h-5' />
+                !isOpen ? <IoMdArrowDropup className='w-5 h-5' /> : <IoMdArrowDropdown className='w-5 h-5' />
               }
             </span>
             <p className='text-lg font-medium'> Your Order (2) </p>

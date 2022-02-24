@@ -5,7 +5,10 @@ import { Fragment, useState } from 'react'
 import { FcGoogle } from "react-icons/fc"
 import SignUp from './SignUp'
 
-const SignIn=({ isOpen, setIsOpen }) => {
+const SignIn = ({ isOpen, setIsOpen }) => {
+    const [openSignUp, setOpenSignUp]=useState(false)
+    const openSignUpModel=()=>setOpenSignUp((prev)=>!prev);
+    // console.log(openSignUp)
 
     function closeModal() {
         setIsOpen(false)
@@ -14,7 +17,7 @@ const SignIn=({ isOpen, setIsOpen }) => {
 
     return (
         <>
-        {/* <SignUp /> */}
+            <SignUp isOpen={openSignUp} setIsOpen={setOpenSignUp} />
             <Transition appear show={isOpen} as={Fragment}>
                 <Dialog
                     as="div"
@@ -84,7 +87,7 @@ const SignIn=({ isOpen, setIsOpen }) => {
                                     <button className='flex justify-center items-center gap-2 bg-white border border-gray-400 py-2  rounded-lg hover:bg-gray-100 w-full text-center text-lg md:text-xl text-gray-500 '> <FcGoogle className='w-8 h-8' /> Continue with Google</button>
 
                                     <div className='md:text-lg text-gray-500'>
-                                        New to Zomato? <span className='text-zomatoRed-300 hover:cursor-pointer' onClick={closeModal, ()=>{(<SignUp isOpen={true} setIsOpen={true}/>)}}>Create account</span>
+                                        New to Zomato? <span className='text-zomatoRed-300 hover:cursor-pointer' onClick={closeModal,openSignUpModel}>Create account</span>
                                     </div>
 
                                 </div>

@@ -3,17 +3,21 @@ import { Fragment, useState } from 'react'
 
 // Icons
 import { FcGoogle } from "react-icons/fc"
+import SignIn from './SignIn';
 
-export default function SignUp({ isOpen, setIsOpen }) {
+const SignUp = ({ isOpen, setIsOpen }) => {
+    const [openSignIn, setOpenSignIn] = useState(false);
+    const openSignInModel = () => setOpenSignIn(true);
+    console.log(openSignIn);
 
     function closeModal() {
         setIsOpen(false)
-    }
+    } 
 
 
     return (
         <>
-
+            {/* <SignIn isOpen={openSignIn} setIsOpen={setOpenSignIn} /> */}
 
             <Transition appear show={isOpen} as={Fragment}>
                 <Dialog
@@ -51,7 +55,7 @@ export default function SignUp({ isOpen, setIsOpen }) {
                             leaveTo="opacity-0 scale-95"
                         >
                             <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-lg">
-                            <Dialog.Title
+                                <Dialog.Title
                                     as="h3"
                                     className="text-3xl font-medium leading-6 text-gray-700 pb-10"
                                 >
@@ -70,10 +74,10 @@ export default function SignUp({ isOpen, setIsOpen }) {
                                         </div>
 
                                         <div className='flex items-top gap-2'>
-                                            <input type="checkbox" id="terms" className='md:w-5 md:h-5'/>
+                                            <input type="checkbox" id="terms" className='md:w-5 md:h-5' />
                                             <lable htmlFor="terms" className="text-gray-500 text-xs ">I agree to Zomato's <span className='text-zomatoRed-300 text-xs'>Terms of service, privacy policy </span>
-                                            <span > and </span>
-                                            <span className='text-zomatoRed-300 text-xs '>Content policies</span>
+                                                <span > and </span>
+                                                <span className='text-zomatoRed-300 text-xs '>Content policies</span>
                                             </lable>
                                         </div>
 
@@ -92,7 +96,7 @@ export default function SignUp({ isOpen, setIsOpen }) {
                                     <button className='flex justify-center items-center gap-2 bg-white border border-gray-400 py-2  rounded-lg hover:bg-gray-100 w-full text-center text-lg md:text-xl text-gray-500 '> <FcGoogle className='w-8 h-8' /> Continue with Google</button>
 
                                     <div className='md:text-lg text-gray-500'>
-                                        Already have an account? <span className='text-zomatoRed-300 hover:cursor-pointer' onClick={closeModal}>Log in</span>
+                                        Already have an account? <span className='text-zomatoRed-300 hover:cursor-pointer' onClick={closeModal, openSignInModel}>Log in</span>
                                     </div>
 
                                 </div>
@@ -105,3 +109,5 @@ export default function SignUp({ isOpen, setIsOpen }) {
         </>
     )
 }
+
+export default SignUp;
