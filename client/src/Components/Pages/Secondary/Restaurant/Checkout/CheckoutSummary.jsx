@@ -116,7 +116,7 @@ const CheckoutSummary = () => {
                     </div>
                 </div>
                 <div className='p-1 hidden md:block relative'>
-                    <div className='flex items-center gap-2 bg-zomatoRed-400 text-white text-lg rounded-lg justify-center w-72  py-2  my-4 z-10 shadow-2xl fixed bottom-4 right-74 '>
+                    <div className='flex items-center gap-2 bg-zomatoRed-400 text-white text-lg rounded-lg justify-center lg:w-72 md:w-64  py-2  my-4 z-10 shadow-2xl fixed bottom-4 lg:right-74 md:right-2'>
                         Place order
                         <MdArrowRight className='w-7 h-7' />
                     </div>

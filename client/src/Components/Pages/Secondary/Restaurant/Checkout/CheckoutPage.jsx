@@ -11,7 +11,7 @@ const CheckoutPage = () => {
             <div className='md:hidden'>
                 <CheckoutSummary />
             </div>
-            <div className='hidden md:flex lg:container lg:mx-auto lg:px-72 '>
+            <div className='hidden md:flex lg:container lg:mx-auto lg:px-72 md:px-'>
                 <div className='w-2/3'>
                     <div>
                         <h1 className='text-3xl font-medium py-4 text-gray-700'>Checkout</h1>
