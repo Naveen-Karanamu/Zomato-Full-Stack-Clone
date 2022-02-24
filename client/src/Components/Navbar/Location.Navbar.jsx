@@ -71,7 +71,7 @@ const NavLg = ({signIn,signUp}) => {
             <div className="container mx-auto px-52 flex w-full items-center justify-between my-3">
                 <div className="flex items-center gap-6">
                     <div className="w-32">
-                        <img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png?fit=around|198:42&crop=198:42;*,*" alt="logo" className="w-full h-full" />
+                        <img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png" alt="logo" className="w-full h-full" />
                     </div>
                     <div className="flex items-center gap-2 px-2 shadow py-3 border rounded-md">
                         <div className="flex items-center justify-between border-r-2  pr-2 w-56 ">
