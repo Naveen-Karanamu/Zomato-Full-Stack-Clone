@@ -20,5 +20,3 @@ export const FoodList = (props) => {
 }
 
 export default FoodList;
-
-// image="https://b.zmtcdn.com/data/dish_photos/75f/3130b3af489703c3d850118409b8775f.jpg" title="Chicken Double Joint Biriyani" price="250" rating="3.5"
