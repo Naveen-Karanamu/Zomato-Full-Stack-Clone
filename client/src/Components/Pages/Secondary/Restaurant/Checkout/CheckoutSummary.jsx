@@ -10,8 +10,9 @@ import { MdArrowRight } from "react-icons/md"
 const CheckoutSummary = () => {
     return (
         <>
-            <div className='px-2'>
-                <div className='flex items-center justify-between border-b border-gray-200 h-16 py-9'>
+            <div className='px-2 relative md:mb-20'>
+                <h1 className='hidden md:block text-xl text-gray-700 font-medium mb-4'>Summary</h1>
+                <div className='flex items-center justify-between border-b border-gray-200 h-16 py-9 md:hidden'>
                     <div className='flex gap-2 items-center'>
                         <HiLocationMarker className='w-5 h-5 text-green-600' />
                         <p className='text-gray-500'>Delivering to: <span className='text-black font-medium'>Srinivasa Nagar ...</span></p>
@@ -20,11 +21,11 @@ const CheckoutSummary = () => {
                 </div>
 
                 <div className='p-1 mt-4'>
-                    <div className='p-5 bg-gray-50 border border-gray-100'>
+                    <div className='p-5 bg-gray-50 border border-gray-100 md:rounded-t-lg'>
                         <p className='tracking-widest text-sm text-gray-700 pb-2'>ORDER FROM</p>
                         <h2 className='text-lg text-gray-700'>The Biriyani Hub</h2>
                         <p className='text-sm text-gray-500'>Madhurawada, Vizag</p>
-                    </div>
+                    </div> 
                 </div>
 
                 <div className='flex items-start justify-between p-5'>
@@ -108,9 +109,15 @@ const CheckoutSummary = () => {
                     Orders once placed cannot be cancelled and ar non-refundalble.
                 </div>
 
-                <div className='p-1'>
+                <div className='p-1 md:hidden'>
                     <div className='flex items-center gap-2 bg-zomatoRed-400 text-white text-lg rounded-lg justify-center w-full py-2  my-4'>
                         Select Delivery Address
+                        <MdArrowRight className='w-7 h-7' />
+                    </div>
+                </div>
+                <div className='p-1 hidden md:block relative'>
+                    <div className='flex items-center gap-2 bg-zomatoRed-400 text-white text-lg rounded-lg justify-center w-72  py-2  my-4 z-10 shadow-2xl fixed bottom-4 right-74 '>
+                        Place order
                         <MdArrowRight className='w-7 h-7' />
                     </div>
                 </div>

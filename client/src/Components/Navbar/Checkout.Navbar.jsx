@@ -11,7 +11,7 @@ const CheckoutNavbar = () => {
                     <h3 className='text-2xl font-medium text-gray-700'>Checkout</h3>
                 </div>
                 <div className='hidden md:block' >
-                    <div className='lg:container lg:mx-auto lg:px-80 border-b border-gray-200 h-20 flex items-center justify-between'>
+                    <div className='lg:container lg:mx-auto lg:px-72 border-b border-gray-200 h-20 flex items-center justify-between'>
                         <div className='text-zomatoRed-200 flex items-center w-1/3'>
                             <IoMdArrowDropleft className='w-6 h-6 text-zomatoRed-300' />
                             <p>Back to Restaurant</p>
@@ -25,7 +25,7 @@ const CheckoutNavbar = () => {
                             <div className='rounded-full w-10 h-10'>
                                 <img src="https://images.unsplash.com/photo-1644982647844-5ee1bdc5b114?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="user" className='w-full h-full rounded-full' />
                             </div>
-                            <p className='text-lg '>Sanorita</p>
+                            <p className='text-lg '>Senorita</p>
                         </div>
                     </div>
                 </div>
