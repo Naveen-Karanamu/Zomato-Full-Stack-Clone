@@ -15,7 +15,7 @@ export default function ReviewModel({ isOpen, setIsOpen,handleRating, ...props }
     return (
         <>
 
-            <div className=' z-50'  >
+            <div className=' z-10'  >
                 <Transition appear show={isOpen} as={Fragment}>
                     <Dialog
                         as="div"

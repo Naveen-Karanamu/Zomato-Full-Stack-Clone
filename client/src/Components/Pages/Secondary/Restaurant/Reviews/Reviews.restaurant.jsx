@@ -7,7 +7,7 @@ export const ReviewsPage = () => {
     const [reviews, setReviews] = useState(["", "", ""]);
     return (
         <>
-            <div className='md:flex gap-4'>
+            <div className='md:flex gap-4 lg:container lg:mx-auto lg:px-52 px-4 md:pb-4'>
                 <div className='md:hidden'>
                     <AddReviewCard />
                 </div>

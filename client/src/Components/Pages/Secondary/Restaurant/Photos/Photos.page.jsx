@@ -21,7 +21,7 @@ export const PhotosPage = () => {
                     onClose={closeViewer}
                 />
             )}
-            <div className='flex flex-wrap gap-3'>
+            <div className='flex flex-wrap gap-3 lg:container lg:mx-auto lg:px-52 px-4 md:pb-4'>
                 {
                     photos.map((photo) => (
                         <PhotosCollection image={photo} openViewer={openViewer} />

@@ -13,7 +13,7 @@ import CartContainer from './Cart/CartContainer';
 export const OrderOnline = () => {
   return (
     <>
-      <div className='w-full flex'>
+      <div className='w-full flex lg:container lg:mx-auto lg:px-52 px-4 md:pb-4'>
 
         <div className='hidden md:block md:w-1/4 w-full'>
           <aside className='flex flex-col gap-1'>
@@ -22,12 +22,12 @@ export const OrderOnline = () => {
         </div>
 
         <div className='w-full md:w-3/4  md:border-l border-gray-300 h-48 md:pl-4'>
-          <div className=''> 
+          <div className=''>
             <FloatMenuSm />
           </div>
           <div >
             <div>
-              <section className='hidden md:flex flex-col gap-4'>
+              <div className='hidden md:flex flex-col gap-4'>
                 <div className='flex items-center justify-between'>
                   <h2 className='text-xl md:text-2xl text-gray-800 md:text-black md:font-medium'>Order Online</h2>
                   <div className='flex items-center gap-3 border pl-4  py-2 border-gray-300 rounded-lg'>
@@ -60,7 +60,7 @@ export const OrderOnline = () => {
                   </p>
                 </div>
 
-              </section>
+              </div>
             </div>
             <div className='md:py-4'>
               <div className='flex items-center justify-between'>
@@ -80,9 +80,10 @@ export const OrderOnline = () => {
             </div>
           </div>
         </div>
-        <div>
-          <CartContainer />
-        </div>
+      </div>
+      <div className=''>
+        <CartContainer />
+
       </div>
     </>
   )
