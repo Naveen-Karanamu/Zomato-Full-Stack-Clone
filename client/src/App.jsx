@@ -14,6 +14,7 @@ import MenuPage from "./Components/Pages/Secondary/Restaurant/Menu/MenuPage";
 import PhotosPage from "./Components/Pages/Secondary/Restaurant/Photos/Photos.page";
 import CheckoutHOC from "./HOC/Checkout.HOC";
 import CheckoutPage from "./Components/Pages/Secondary/Restaurant/Checkout/CheckoutPage";
+import RestaurantRedirect from "./Components/Pages/Secondary/Restaurant/Redirect";
 
 function App() {
   return (
@@ -21,12 +22,9 @@ function App() {
       <Route path="/" exact>
         <Redirect to="/location/delivery"/>
       </Route>
-      <Route path="/restaurant/:id" exact>
-        <Redirect to="/restaurant/:id/order-online "/>
-      </Route>
+      <Route path="/restaurant/:id" exact component={RestaurantRedirect} />
       
       <LocationHOC path="/location/:tabName" exact component={Tab} />
-      <RestaurantHOC path="/restaurant/:id" exact component={RestaurantPage}/>
       <RestaurantHOC path="/restaurant/:id/overview" exact component={Temp}/>
       <RestaurantHOC path="/restaurant/:id/order-online" exact component={OrderOnline}/>
       <RestaurantHOC path="/restaurant/:id/reviews" exact component={ReviewsPage}/>

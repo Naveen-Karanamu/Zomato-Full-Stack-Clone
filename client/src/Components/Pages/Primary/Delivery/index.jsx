@@ -24,7 +24,7 @@ export const Delivery = () => {
         <div className='lg:container lg:mx-auto lg:px-48'>
           <h1 className='text-xl lg:text-3xl lg:font-semibold text-gray-700  md:text-3xl pb-2 md:pb-8 px-4'>Gajuwaka Restaurants, Vizag</h1>
         </div>
-        <div className='md:px-4 md:flex flex-wrap justify-around lg:container lg:mx-auto lg:px-48 '>
+        <div className='md:px-4 md:flex flex-wrap justify-between  lg:container lg:mx-auto lg:px-48 '>
           {
             restaurantList.map((list) => (
               <RestaurantCard {...list} key={restaurantList._id}/>
