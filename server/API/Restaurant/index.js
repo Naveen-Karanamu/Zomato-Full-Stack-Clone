@@ -3,7 +3,7 @@ import express, { query } from "express";
 import passport from "passport";
 
 // Database model
-import { FoodModel } from "../../database/allModels";
+import { FoodModel,RestaurantModel } from "../../database/allModels";
 
 import { validateRestaurantCity, validateRestaurantSearchString } from "../../Validations/restaurant";
 import {validateRestaurantId} from "../../Validations/food"
@@ -17,9 +17,9 @@ Description: Get all restaurant details based on city
 params: NONE
 Access: Public
 Method: GET
-*/
+*/ 
 Router.get("/", async (req, res) => {
-    try {
+    try { 
         await validateRestaurantCity(req.query)
 
         const { city } = req.query;
@@ -28,7 +28,7 @@ Router.get("/", async (req, res) => {
     } catch (error) {
         return res.status(500).json({ error: error.message });
     }
-})
+})  
 
 /*
 Route: /

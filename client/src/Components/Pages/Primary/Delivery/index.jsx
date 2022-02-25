@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useSelector } from 'react-redux';
 
 // components
 import FoodsDeliveryCarausal from '../../../Carousel/Delivery/Food.delivery.carousel';
@@ -9,21 +10,26 @@ import RestaurantCard from '../../../Cards/Restaurants/Delivery.restaurants';
 export const Delivery = () => {
 
   const [restaurantList, serRastaurantList] = useState([
-    {
-      _id:"1234",
-      photos:[
-        "https://b.zmtcdn.com/data/pictures/6/2800126/11b1ca01d1e39d2d619acebdfb70352e_o2_featured_v2.jpg",
-      ],
-      name:"Ramchandra Restaurant",
-      cuisine:["Biriyani", "Chinese", "North Indian", "Seafood", "Andhra"],
-      averageCost:350,
-      isPro:true,
-      isOff:15,
-      deliveryTime:47,
-      rating:4.4
-    }
+    // {
+    //   _id:"1234",
+    //   photos:[
+    //     "https://b.zmtcdn.com/data/pictures/6/2800126/11b1ca01d1e39d2d619acebdfb70352e_o2_featured_v2.jpg",
+    //   ],
+    //   name:"Ramchandra Restaurant",
+    //   cuisine:["Biriyani", "Chinese", "North Indian", "Seafood", "Andhra"],
+    //   averageCost:350,
+    //   isPro:true,
+    //   isOff:15,
+    //   deliveryTime:47,
+    //   rating:4.4
+    // }
   ])
 
+  const reduxState=useSelector((globalStore)=>globalStore.restaurantReducer.restaurants)
+
+  useEffect(()=>{
+    reduxState.restaurants && serRastaurantList(reduxState.restaurants)
+  },[reduxState.restaurants])
   return (
     <>
       <div className='md:pt-20 pb-20'>
