@@ -35,6 +35,8 @@ export const RestaurantOverview = () => {
         }
     }, [])
 
+console.log(reduxState?.mapLocation?.split(",").map((item)=>parseFloat(item)) );
+
     return (
         <>
             <div className='flex flex-col  md:flex-row-revers gap-2 bg-white lg::w-2/3 md:w-2/3'>
@@ -52,7 +54,7 @@ export const RestaurantOverview = () => {
                     </div>
 
                     <div className='md:hidden border rounded-md py-4 px-2 mt-4'>
-                        <MapColumn phone="+919295000521" mapLocation={[17.688229266181448, 83.20616323443606]} title="Helapuri Restaurant" address="8-8-36, Main Road, Old Gajuwaka, Vizag" />
+                        <MapColumn phone={reduxState?.contactNumber} mapLocation={reduxState?.mapLocation?.split(",").map((item) => parseFloat(item))} title={reduxState?.name} address={reduxState?.address} />
                     </div>
 
                     <div className='md:py-6 py-3'>
