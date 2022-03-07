@@ -13,11 +13,11 @@ const ResInfoSm = ({props}) => {
             <div className="px-3">
                 <div className=" py-4 flex gap-10">
                     <div className="flex gap-2 items-baseline">
-                        <span className="flex items-baseline text-sm bg-buttonGreen-100 text-white font-semibold rounded-lg px-2 py-1">4.2 <AiFillStar className="w-2 h-2" /></span>
+                        <span className="flex items-baseline text-sm bg-buttonGreen-100 text-white font-semibold rounded-lg px-2 py-1">{props.diningRating} <AiFillStar className="w-2 h-2" /></span>
                         <p className="border-b-2 border-gray-300  border-dotted text-sm">858 DINING</p>
                     </div>
                     <div className="flex gap-2 items-baseline">
-                        <span className="flex items-baseline text-sm bg-buttonGreen-100 text-white font-semibold rounded-lg px-2 py-1">3.9 <AiFillStar className="w-2 h-2" /></span>
+                        <span className="flex items-baseline text-sm bg-buttonGreen-100 text-white font-semibold rounded-lg px-2 py-1">{props.deliveryRating}<AiFillStar className="w-2 h-2" /></span>
                         <p className="border-b-2 border-gray-300  border-dotted text-sm">47.5K DELIVERY</p>
                     </div>
                 </div>

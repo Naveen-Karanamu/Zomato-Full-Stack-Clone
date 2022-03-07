@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useLocation, useParams } from 'react-router-dom';
 import { useDispatch } from "react-redux"
 
@@ -16,11 +16,25 @@ import { getSpecificRestaurant } from '../Redux/Reducer/Restaurant/restaurant.ac
 import { getImage } from "../Redux/Reducer/Image/image.action"
 
 export const RestaurantLayout = (props) => {
-    const [restaurant, setRestaurant] = useState({ images: [] })
+    const [restaurant, setRestaurant] = useState({
+        images: [],
+        name: "",
+        cuisine: "",
+        address: "",
+    })
 
 
     const location = useLocation();
     const currentPath = location.pathname;
+    const { id } = useParams();
+
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(getSpecificRestaurant(id)).then((data) => {
+            setRestaurant(prev => ({ ...prev, ...data.payload.restaurant }))
+            dispatch(getImage(data.payload.restaurant.photos)).then(data=>setRestaurant(prev=>({...prev, ...data.payload.images})))
+        })
+    }, [])
 
     return (
         <>
@@ -31,9 +45,11 @@ export const RestaurantLayout = (props) => {
                 </div>
                 <div className={currentPath.includes("menu") || currentPath.includes("photos") ? "md:sticky top-0 bg-white w-full" : "md:sticky top-0  bg-white w-full z-10 "}>
                     <ResInfo
-                        name="The Biriyani Hub"
-                        cuisine="Biryani, Chinese, North Indian, Seafood, Andhra"
-                        address="Gajuwaka, Vizag"
+                        name={restaurant?.name}
+                        cuisine={restaurant?.cuisine}
+                        address={restaurant?.address}
+                        deliveryRating={restaurant.rating || 0}
+                        diningRating={restaurant.rating || 0}
                     />
                     <div className="lg:container lg:mx-auto lg:px-52 px-4 ">
                         <TabsContainer />
