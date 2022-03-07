@@ -7,7 +7,7 @@ import MainMenuComponent from './MainMenu.restaurant';
 import InfoCard from '../../../../Cards/Restaurants/InfoCard';
 import InfoCarousel from '../../../../Carousel/Restaurant/InfoCarousel';
 import ReviewsRestaurant from './Reviews.restaurant';
-import MapColumn from './MapColumn.restaurant';import ReactStars from "react-rating-stars-component";
+import MapColumn from './MapColumn.restaurant'; import ReactStars from "react-rating-stars-component";
 
 // Icons
 import { MdArrowRight } from "react-icons/md"
@@ -20,10 +20,7 @@ export const RestaurantOverview = () => {
 
     return (
         <>
-            <div className='flex flex-col  md:flex-row-revers gap-2 bg-white -z-10'>
-                {/* <aside className='hidden md:block md:w-1/3 lg:w-1/3 border shadow-lg rounded-xl sticky top-0 p-4' style={{ height: "fit-content" }}>
-                    <MapColumn phone="+919295000521" mapLocation={[17.688229266181448, 83.20616323443606]} title="Helapuri Restaurant" address="8-8-36, Main Road, Old Gajuwaka, Vizag" />
-                </aside> */}
+            <div className='flex flex-col  md:flex-row-revers gap-2 bg-white'>
 
                 <div className='lg::w-2/3 md:w-2/3'>
                     <h1 className='text-3xl font-normal hidden md:block '>About this place</h1>
@@ -33,7 +30,9 @@ export const RestaurantOverview = () => {
                             <span className='text-zomatoRed-400 flex items-center text-xs md:text-sm'>See all menus <MdArrowRight className='w-5 h-5' /></span>
                         </Link>
                     </div>
-                    <MainMenuComponent image="https://b.zmtcdn.com/data/menus/866/18795866/1ac595a49ba62605d60db3642c4bf20b.jpg" name="Menu" pages="2" />
+                    <div className=''>
+                        <MainMenuComponent image="https://b.zmtcdn.com/data/menus/866/18795866/1ac595a49ba62605d60db3642c4bf20b.jpg" name="Menu" pages="2" />
+                    </div>
 
                     <div className='md:hidden border rounded-md py-4 px-2 mt-4'>
                         <MapColumn phone="+919295000521" mapLocation={[17.688229266181448, 83.20616323443606]} title="Helapuri Restaurant" address="8-8-36, Main Road, Old Gajuwaka, Vizag" />
@@ -103,7 +102,7 @@ export const RestaurantOverview = () => {
                             <div>
                                 <h2 className='text-lg md:text-xl text-gray-800'>Rate your experience for</h2>
                             </div>
-                            <div className="flex gap-8 md:gap-0 z-10">
+                            <div className="flex gap-8 md:gap-0">
                                 <div className="flex items-center gap-2 md:w-full">
                                     <input type="radio" name="review" id="dining" className="bg-zomatoRed-400 w-5 h-5" />
                                     <label htmlFor="dining" className="text-sm md:text-base  text-gray-500">Dining</label>
@@ -133,6 +132,9 @@ export const RestaurantOverview = () => {
                     </div>
 
                     <div>
+                        <ReviewsRestaurant />
+                        <ReviewsRestaurant />
+                        <ReviewsRestaurant />
                         <ReviewsRestaurant />
                     </div>
 

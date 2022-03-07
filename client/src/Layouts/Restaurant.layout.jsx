@@ -1,6 +1,6 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import { useLocation, useParams } from 'react-router-dom';
-import {useDispatch} from "react-redux" 
+import { useDispatch } from "react-redux"
 
 // Componrnts 
 import ResNavbar from '../Components/Navbar/Restaurant.navbar';
@@ -13,10 +13,10 @@ import TabsContainer from '../Components/Tabs/Restaurant.tabs';
 
 // Redux actions
 import { getSpecificRestaurant } from '../Redux/Reducer/Restaurant/restaurant.action';
-import {getImage} from "../Redux/Reducer/Image/image.action"
+import { getImage } from "../Redux/Reducer/Image/image.action"
 
 export const RestaurantLayout = (props) => {
-    const [restaurant, setRestaurant] = useState({images:[]})
+    const [restaurant, setRestaurant] = useState({ images: [] })
 
 
     const location = useLocation();
@@ -29,11 +29,11 @@ export const RestaurantLayout = (props) => {
                 <div className=" mt-2  md:mt-6 lg:mt-10">
                     <DefaultImageGrid images={restaurant.images} />
                 </div>
-                <div className={currentPath.includes("menu") ||currentPath.includes("photos") ?"md:sticky top-0 bg-white w-full":"md:sticky top-0  bg-white w-full z-10 "}>
-                    <ResInfo 
-                    name="The Biriyani Hub"
-                    cuisine="Biryani, Chinese, North Indian, Seafood, Andhra"
-                    address="Gajuwaka, Vizag"
+                <div className={currentPath.includes("menu") || currentPath.includes("photos") ? "md:sticky top-0 bg-white w-full" : "md:sticky top-0  bg-white w-full z-10 "}>
+                    <ResInfo
+                        name="The Biriyani Hub"
+                        cuisine="Biryani, Chinese, North Indian, Seafood, Andhra"
+                        address="Gajuwaka, Vizag"
                     />
                     <div className="lg:container lg:mx-auto lg:px-52 px-4 ">
                         <TabsContainer />
@@ -43,9 +43,14 @@ export const RestaurantLayout = (props) => {
                 {
                     currentPath.includes("overview") &&
                     <div>
-                        <div className=' flex-row-reverse lg:container lg:mx-auto lg:px-52 bg-transparent bg-none hidden md:flex sticky top-80 ' >
+                        <div className=' flex-row-reverse lg:container lg:mx-auto lg:px-52 bg-transparent bg-none hidden md:flex sticky top-80 bg-white' >
                             <MapRestaruant />
                         </div>
+                    </div>
+                }
+                {
+                    currentPath.includes("overview") &&
+                    <div>
                         <div className='lg:container lg:mx-auto lg:px-52 md:-mt-96 pt-4 '>
                             <RestaurantOverview />
                         </div>
