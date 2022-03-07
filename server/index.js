@@ -63,4 +63,6 @@ zomato.use("/mail", MailServices);
 
 zomato.get("/", (req, res) => res.json({ message: "Setup done" }));
 
-zomato.listen(3001, () => ConnectDB().then(() => console.log("Server is running")).catch(() => console.log("Server is running, But database connection failed!")))
+zomato.listen(3001, () => ConnectDB().then(() => console.log("Server is running")).catch((error)=>console.log(error, "Server is running, But database connection failed!")))
+
+// catch(() => console.log("Server is running, But database connection failed!")))

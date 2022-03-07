@@ -7,17 +7,19 @@ import { getImage } from '../../../Redux/Reducer/Image/image.action';
 // Icons
 import { AiTwotoneStar } from "react-icons/ai"
 
-export const RestaurantCard = (props) => {
+const RestaurantCard = (props) => {
     const [image, setImage] = useState({
-        images: []
-    })
-
+        images: [
+            {
+                location: "",
+            },
+        ]
+    });
     const dispatch = useDispatch();
 
     useEffect(() => {
         props.photos && dispatch(getImage(props.photos)).then((data) => setImage(data.payload.image))
     }, [props.photos])
-
     return (
         <>
             <div className='w-full'>
@@ -52,4 +54,4 @@ export const RestaurantCard = (props) => {
     )
 }
 
-export default RestaurantCard
+export default RestaurantCard;

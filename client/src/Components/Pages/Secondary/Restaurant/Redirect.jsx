@@ -6,11 +6,12 @@ const RestaurantRedirect = () => {
     const { id } = useParams();
     useEffect(() => {
         history.push(`/restaurant/${id}/order-online`)
-    }, [id])
+    }, [])
 
     return (
-        <></>
+        <>
+        </>
     )
 }
 
-export default RestaurantRedirect;
+export default RestaurantRedirect; 

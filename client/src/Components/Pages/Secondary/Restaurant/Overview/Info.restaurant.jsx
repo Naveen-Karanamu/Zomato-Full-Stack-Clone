@@ -7,7 +7,7 @@ import { BsInfoCircle, BsBookmarkPlus } from "react-icons/bs"
 import { MdOutlineDirections } from "react-icons/md"
 import { RiShareForwardLine } from "react-icons/ri"
 
-const ResInfoSm = () => {
+const ResInfoSm = ({props}) => {
     return (
         <>
             <div className="px-3">
@@ -23,9 +23,9 @@ const ResInfoSm = () => {
                 </div>
 
                 <div className="flex flex-col  gap-1">
-                    <h1 className="text-2xl">Helapuri Restaurant</h1>
-                    <p className="text-md text-gray-600">Biryani, Chinese, North Indian, Seafood, Andhra</p>
-                    <p className="text-sm text-gray-400">Gajuwaka, Vizag</p>
+                    <h1 className="text-2xl">{props.name}</h1>
+                    <p className="text-md text-gray-600">{props.cuisine}</p>
+                    <p className="text-sm text-gray-400"></p>
                     <p className="flex gap-2">
                         <span className="text-sm text-zomatoRed-200">Open now - </span>
                         <span className="text-sm text-gray-400 flex items-center gap-2">11am - 10pm (Today) <BsInfoCircle className="w-3 h-3" /></span>
@@ -50,13 +50,13 @@ const ResInfoSm = () => {
     )
 }
 
-const RestInfoMd = () => {
+const RestInfoMd = ({props}) => {
     return (
         <>
             <div className="px-3 lg:container lg:mx-auto lg:px-52 lg:py-2 ">
                 <div className="flex flex-col  gap-1">
                     <div className="flex justify-between items-center">
-                        <h1 className="text-4xl">Helapuri Restaurant</h1>
+                        <h1 className="text-4xl">{props.name}</h1>
                         <div className=" pt-3 pb-1 flex gap-10">
                             <div className="flex gap-2 items-center">
                                 <span className="flex items-baseline text-md bg-buttonGreen-100 text-white font-semibold rounded-lg px-2 py-1 gap-1">4.2 <AiFillStar className="w-3 h-3" /></span>
@@ -68,8 +68,8 @@ const RestInfoMd = () => {
                             </div>
                         </div>
                     </div>
-                    <p className="text-lg text-gray-600">Biryani, Chinese, North Indian, Seafood, Andhra</p>
-                    <p className="text-md text-gray-400">Gajuwaka, Vizag</p>
+                    <p className="text-lg text-gray-600">{props.cuisine}</p>
+                    <p className="text-md text-gray-400">{props.address}</p>
                     <p className="flex gap-2">
                         <span className="text-md text-zomatoRed-200">Open now - </span>
                         <span className="text-md text-gray-400 flex items-center gap-2">11am - 10pm (Today) <BsInfoCircle className="w-4 h-4" /></span>
@@ -95,13 +95,15 @@ const RestInfoMd = () => {
     )
 }
 
-const ResInfo = () => {
-    return (
-        <>
-            <div className="md:hidden"><ResInfoSm /></div>
-            <div className="hidden md:block"><RestInfoMd /></div>
-        </>
-    )
-}
+const
+
+    ResInfo = (props) => {
+        return (
+            <>
+                <div className="md:hidden"><ResInfoSm props={props} /></div>
+                <div className="hidden md:block"><RestInfoMd props={props} /></div>
+            </>
+        )
+    }
 
 export default ResInfo;
