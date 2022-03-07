@@ -9,8 +9,7 @@ const RestaurantRedirect = () => {
     }, [])
 
     return (
-        <>
-        </>
+        <></>
     )
 }
 

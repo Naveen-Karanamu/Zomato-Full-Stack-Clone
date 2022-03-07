@@ -1,4 +1,4 @@
-import LocationHOC from "./HOC/Location.HOC";
+ import LocationHOC from "./HOC/Location.HOC";
 
 import { Route, Redirect } from "react-router-dom";
 
