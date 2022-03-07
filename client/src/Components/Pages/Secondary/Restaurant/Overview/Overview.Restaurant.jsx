@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import { useSelector, useDispatch } from "react-redux"
 
-
-
+// components
 import MainMenuComponent from './MainMenu.restaurant';
 import InfoCard from '../../../../Cards/Restaurants/InfoCard';
 import InfoCarousel from '../../../../Carousel/Restaurant/InfoCarousel';
 import ReviewsRestaurant from './Reviews.restaurant';
 import MapColumn from './MapColumn.restaurant'; import ReactStars from "react-rating-stars-component";
-
+import { getImage } from "../../../../../Redux/Reducer/Image/image.action"
+import { getSpecificRestaurant } from "../../../../../Redux/Reducer/Restaurant/restaurant.action"
 // Icons
 import { MdArrowRight } from "react-icons/md"
 import { MdOutlineDone } from "react-icons/md"
@@ -18,9 +19,25 @@ import { IoStarHalf, IoStarOutline, IoStarSharp } from "react-icons/io5"
 export const RestaurantOverview = () => {
     const { id } = useParams();
 
+    const [menuImage, setMenuImage] = useState({ images: [] })
+
+    const reduxState = useSelector(globalStore => globalStore.restaurantReducer.selectedRestaurant.restaurant);
+
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        if (reduxState) {
+            dispatch(getImage(reduxState?.menuImage)).then((data) => {
+                const images =[];
+                data.payload.image.images.map(({location}) =>images.push(location));
+                setMenuImage(images)
+            })
+        }
+    }, [])
+
     return (
         <>
-            <div className='flex flex-col  md:flex-row-revers gap-2 bg-white'>
+            <div className='flex flex-col  md:flex-row-revers gap-2 bg-white '>
 
                 <div className='lg::w-2/3 md:w-2/3'>
                     <h1 className='text-3xl font-normal hidden md:block '>About this place</h1>
@@ -31,7 +48,7 @@ export const RestaurantOverview = () => {
                         </Link>
                     </div>
                     <div className=''>
-                        <MainMenuComponent image="https://b.zmtcdn.com/data/menus/866/18795866/1ac595a49ba62605d60db3642c4bf20b.jpg" name="Menu" pages="2" />
+                        <MainMenuComponent image={menuImage} name="Menu" pages="2" />
                     </div>
 
                     <div className='md:hidden border rounded-md py-4 px-2 mt-4'>
