@@ -28,8 +28,8 @@ export const RestaurantOverview = () => {
     useEffect(() => {
         if (reduxState) {
             dispatch(getImage(reduxState?.menuImage)).then((data) => {
-                const images =[];
-                data.payload.image.images.map(({location}) =>images.push(location));
+                const images = [];
+                data.payload.image.images.map(({ location }) => images.push(location));
                 setMenuImage(images)
             })
         }
@@ -58,13 +58,14 @@ export const RestaurantOverview = () => {
                     <div className='md:py-6 py-3'>
                         <h2 className='text-lg md:text-xl md:py-1 text-gray-800'>Cuisines</h2>
                         <div className='flex flex-wrap gap-2 py-1'>
-                            <span className='text-cuisinesBlue-400 border-2 border-gray-300 px-3 py-1 rounded-full text-sm  md:text-base'>South Indian</span>
-                            <span className='text-cuisinesBlue-400 border-2 px-3 py-1 border-gray-300 rounded-full text-sm  md:text-base'>North Indian</span>
+                            {reduxState?.cuisine.map((data) =>
+                                <span className='text-cuisinesBlue-400 border-2 border-gray-300 px-3 py-1 rounded-full text-sm  md:text-base'>{data}</span>
+                            )}
                         </div>
                     </div>
                     <div className='flex flex-col gap-1'>
                         <h2 className='text-lg md:text-xl md:py-1 text-gray-800'>Average Cost</h2>
-                        <h3 className='text-lg text-gray-500'>₹800 for two people (approx)</h3>
+                        <h3 className='text-lg text-gray-500'>₹{reduxState?.averageCost} for two people (approx)</h3>
                         <p className='text-sm text-gray-400'>Exclusive of applicable taxes and charges, if any</p>
                         <p className='text-xs text-gray-300 border-b-2 border-dotted' style={{ width: "fit-content" }}>How do we calculate cost for two?
                         </p>
