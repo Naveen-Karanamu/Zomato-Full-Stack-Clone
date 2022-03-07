@@ -37,9 +37,9 @@ export const RestaurantOverview = () => {
 
     return (
         <>
-            <div className='flex flex-col  md:flex-row-revers gap-2 bg-white '>
+            <div className='flex flex-col  md:flex-row-revers gap-2 bg-white lg::w-2/3 md:w-2/3'>
 
-                <div className='lg::w-2/3 md:w-2/3'>
+                <div className=''>
                     <h1 className='text-3xl font-normal hidden md:block '>About this place</h1>
                     <div className='flex justify-between items-center py-4'>
                         <h2 className='text-lg md:text-xl md:py-1 text-gray-800'>Menu</h2>
