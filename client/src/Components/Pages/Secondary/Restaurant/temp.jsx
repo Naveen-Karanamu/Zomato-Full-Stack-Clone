@@ -8,8 +8,6 @@ const loc = useLocation();
     return (
         <>
           <div>
-          {/* {id} */}
-          {loc.pathname}
           </div>
         </>
     )
