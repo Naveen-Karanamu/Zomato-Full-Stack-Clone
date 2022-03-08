@@ -21,7 +21,7 @@ const RestaurantCard = (props) => {
         props.photos && dispatch(getImage(props.photos)).then((data) => setImage(data.payload.image))
     }, [props.photos])
     return (
-            <Link to={`/restaurant/${props._id}`} className='w-full'>
+            <Link to={`/restaurant/${props._id}/order-online`} className='w-full'>
                 <div className='px-4 pt-3 pb-3 w-full md:w-60 md:h-96 md:mb-10 lg:w-1/3 lg:h-full lg:px-4'>
                     <div className='bg-white rounded-2xl shadow-md lg:hover:shadow-lg transtion duration-300 ease-in-out'>
                         <div className='relative'>

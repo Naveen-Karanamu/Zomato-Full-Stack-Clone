@@ -35,7 +35,7 @@ export const RestaurantOverview = () => {
         }
     }, [])
 
-console.log(reduxState?.mapLocation?.split(",").map((item)=>parseFloat(item)) );
+// console.log(reduxState?.mapLocation?.split(",").map((item)=>parseFloat(item)) );
 
     return (
         <>
