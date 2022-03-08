@@ -12,6 +12,25 @@ const Router = express.Router();
 
 /*
 Route: /new
+Description: Get all the reviews of a restaurant
+params: restaurantID
+body: none
+Access: Public
+Method: GET
+*/
+Router.post("/:resId", async (req, res) => {
+    try {
+        const reviews = await ReviewModel.find({restaurant:req.params.resId})
+        await ReviewModel.create(reviewData);
+
+        return res.json({ reviews})
+    } catch (error) {
+        return res.status(500).json({ error: error.message })
+    }
+})
+
+/*
+Route: /new
 Description: Add a new review for food or restaurant
 params: NONE
 body: review object
