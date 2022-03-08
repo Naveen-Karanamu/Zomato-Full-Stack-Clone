@@ -32,7 +32,7 @@ export const RestaurantLayout = (props) => {
     useEffect(() => {
         dispatch(getSpecificRestaurant(id)).then((data) => {
             setRestaurant(prev => ({ ...prev, ...data.payload.restaurant }))
-            dispatch(getImage(data.payload.restaurant.photos)).then(data=>setRestaurant(prev=>({...prev, ...data.payload.images})))
+            dispatch(getImage(data.payload.restaurant.photos)).then(data => setRestaurant(prev => ({ ...prev, ...data.payload.images })))
         })
     }, [])
 
@@ -59,14 +59,9 @@ export const RestaurantLayout = (props) => {
                 {
                     currentPath.includes("overview") &&
                     <div>
-                        <div className=' flex-row-reverse lg:container lg:mx-auto lg:px-52 bg-transparent bg-none hidden md:flex sticky top-80 bg-white' >
+                        <div className=' flex-row-reverse lg:container lg:mx-auto lg:px-52 bg-transparent bg-none hidden md:flex sticky top-80 bg-white -z-10' >
                             <MapRestaruant />
                         </div>
-                    </div>
-                }
-                {
-                    currentPath.includes("overview") &&
-                    <div>
                         <div className='lg:container lg:mx-auto lg:px-52 md:-mt-96 pt-4 '>
                             <RestaurantOverview />
                         </div>
