@@ -15,6 +15,7 @@ import PhotosPage from "./Components/Pages/Secondary/Restaurant/Photos/Photos.pa
 import CheckoutHOC from "./HOC/Checkout.HOC";
 import CheckoutPage from "./Components/Pages/Secondary/Restaurant/Checkout/CheckoutPage";
 import RestaurantRedirect from "./Components/Pages/Secondary/Restaurant/Redirect";
+import GoogleAuth from "./Components/Pages/GoogleAuth";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       <RestaurantHOC path="/restaurant/:id/photos" exact component={PhotosPage}/>
       <RestaurantHOC path="/restaurant/:id/menu" exact component={MenuPage}/>
       <CheckoutHOC path="/checkout" exact component={CheckoutPage} />
+      <LocationHOC path="/google/:token" exact component={GoogleAuth}/>
     </>
   );
 }

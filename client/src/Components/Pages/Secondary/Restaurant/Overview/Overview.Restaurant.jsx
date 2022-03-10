@@ -8,8 +8,12 @@ import InfoCard from '../../../../Cards/Restaurants/InfoCard';
 import InfoCarousel from '../../../../Carousel/Restaurant/InfoCarousel';
 import ReviewsRestaurant from './Reviews.restaurant';
 import MapColumn from './MapColumn.restaurant'; import ReactStars from "react-rating-stars-component";
+
+// Redux actions
 import { getImage } from "../../../../../Redux/Reducer/Image/image.action"
 import { getSpecificRestaurant } from "../../../../../Redux/Reducer/Restaurant/restaurant.action"
+import { getReviews } from '../../../../../Redux/Reducer/Reviews/review.action';
+
 // Icons
 import { MdArrowRight } from "react-icons/md"
 import { MdOutlineDone } from "react-icons/md"
@@ -20,6 +24,7 @@ export const RestaurantOverview = () => {
     const { id } = useParams();
 
     const [menuImage, setMenuImage] = useState({ images: [] })
+    const [reviews, setReviews] = useState([])
 
     const reduxState = useSelector(globalStore => globalStore.restaurantReducer.selectedRestaurant.restaurant);
 
@@ -32,10 +37,9 @@ export const RestaurantOverview = () => {
                 data.payload.image.images.map(({ location }) => images.push(location));
                 setMenuImage(images)
             })
+            dispatch(getReviews(reduxState._id)).then((data)=>console.log(data))
         }
     }, [])
-
-// console.log(reduxState?.mapLocation?.split(",").map((item)=>parseFloat(item)) );
 
     return (
         <>
