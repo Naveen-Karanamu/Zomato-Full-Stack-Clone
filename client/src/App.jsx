@@ -17,6 +17,13 @@ import CheckoutPage from "./Components/Pages/Secondary/Restaurant/Checkout/Check
 import RestaurantRedirect from "./Components/Pages/Secondary/Restaurant/Redirect";
 import GoogleAuth from "./Components/Pages/GoogleAuth";
 
+// Axios global settings 
+if(localStorage.zomato){
+  const {token} = JSON.parse(localStorage.zomato);
+  axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
+}
+
+
 function App() {
   return (
     <>
