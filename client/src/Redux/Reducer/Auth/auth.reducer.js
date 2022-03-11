@@ -15,4 +15,4 @@ const authReducer = (state = INITIAL_STATE, action) => {
     }
 }
 
-export default imageReducer;
+export default authReducer;

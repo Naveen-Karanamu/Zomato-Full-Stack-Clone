@@ -1,23 +1,38 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
+import { useDispatch } from 'react-redux'
 
 // Icons
 import { FcGoogle } from "react-icons/fc"
 import SignUp from './SignUp'
 
+// Redux actions
+import { signIn } from '../../Redux/Reducer/Auth/auth.action'
+
 const SignIn = ({ isOpen, setIsOpen }) => {
-    const [openSignUp, setOpenSignUp]=useState(false)
-    const openSignUpModel=()=>setOpenSignUp((prev)=>!prev);
+    const [openSignUp, setOpenSignUp] = useState(false)
+    const openSignUpModel = () => setOpenSignUp((prev) => !prev);
     // console.log(openSignUp)
 
     function closeModal() {
         setIsOpen(false)
     }
 
-    function wrap(){
+    function wrap() {
         closeModal()
         openSignUpModel()
     }
+
+    const [userData, setUserData] = useState({
+        email: "",
+        password: ""
+    })
+
+    const handleChange = (e) => setUserData(prev=>({...prev, [e.target.name]: e.target.value}))
+
+    const dispatch=useDispatch();
+
+    const submit =()=> dispatch(signIn(userData))
 
     return (
         <>
@@ -68,16 +83,20 @@ const SignIn = ({ isOpen, setIsOpen }) => {
 
                                     <form className='flex flex-col gap-5'>
                                         <div className="flex  items-center gap-3 ">
-                                            <input type="email" name="review" placeholder='Enter the e-mail or phone number' id="email" className=" bg-white border border-gray-400 py-2 w-full  rounded-lg md:text-lg px-6" />
+                                            <input type="email" name="email"
+                                                onChange={handleChange}
+                                                placeholder='Enter the e-mail or phone number' id="email" className=" bg-white border border-gray-400 py-2 w-full  rounded-lg md:text-lg px-6" />
 
                                         </div>
                                         <div className="flex items-center gap-3  ">
-                                            <input type="password" name="review" placeholder='Enter the Password' id="password" className="bg-white border border-gray-400 py-2 w-full  rounded-lg md:text-lg px-6" />
+                                            <input type="password" name="password"
+                                                onChange={handleChange}
+                                                placeholder='Enter the Password' id="password" className="bg-white border border-gray-400 py-2 w-full  rounded-lg md:text-lg px-6" />
 
                                         </div>
 
                                         <div className='flex items-center justify-center'>
-                                            <div className=' bg-zomatoRed-300 text-white py-2 rounded-lg  w-full text-center hover:cursor-pointer'>
+                                            <div className=' bg-zomatoRed-300 text-white py-2 rounded-lg  w-full text-center hover:cursor-pointer' onClick={submit}>
                                                 Sign in
                                             </div>
                                         </div>
