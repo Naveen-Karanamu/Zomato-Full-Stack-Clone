@@ -32,7 +32,14 @@ const SignIn = ({ isOpen, setIsOpen }) => {
 
     const dispatch=useDispatch();
 
-    const submit =()=> dispatch(signIn(userData))
+    const submit =()=> {
+        setUserData({
+            email: "",
+            password: ""
+        })
+        dispatch(signIn(userData))
+
+    }
 
     return (
         <>
@@ -85,13 +92,16 @@ const SignIn = ({ isOpen, setIsOpen }) => {
                                         <div className="flex  items-center gap-3 ">
                                             <input type="email" name="email"
                                                 onChange={handleChange}
-                                                placeholder='Enter the e-mail or phone number' id="email" className=" bg-white border border-gray-400 py-2 w-full  rounded-lg md:text-lg px-6" />
+                                                placeholder='Enter the e-mail or phone number' id="email"
+                                                value={userData.email} className=" bg-white border border-gray-400 py-2 w-full  rounded-lg md:text-lg px-6" />
 
                                         </div>
                                         <div className="flex items-center gap-3  ">
                                             <input type="password" name="password"
                                                 onChange={handleChange}
-                                                placeholder='Enter the Password' id="password" className="bg-white border border-gray-400 py-2 w-full  rounded-lg md:text-lg px-6" />
+                                                placeholder='Enter the Password' 
+                                                value={userData.password}
+                                                id="password" className="bg-white border border-gray-400 py-2 w-full  rounded-lg md:text-lg px-6" />
 
                                         </div>
 
