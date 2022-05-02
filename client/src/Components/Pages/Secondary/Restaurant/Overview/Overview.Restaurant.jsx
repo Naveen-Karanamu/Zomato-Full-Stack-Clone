@@ -22,6 +22,7 @@ import { IoStarHalf, IoStarOutline, IoStarSharp } from "react-icons/io5"
 
 export const RestaurantOverview = () => {
     const { id } = useParams();
+    console.log(id);
 
     const [menuImage, setMenuImage] = useState({ images: [] })
     const [reviews, setReviews] = useState([])
@@ -35,6 +36,7 @@ export const RestaurantOverview = () => {
             dispatch(getImage(reduxState?.menuImage)).then((data) => {
                 const images = [];
                 data.payload.image.images.map(({ location }) => images.push(location));
+                console.log(images)
                 setMenuImage(images)
             })
             dispatch(getReviews(reduxState._id)).then((data)=>console.log(data))

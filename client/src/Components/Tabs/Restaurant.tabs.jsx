@@ -49,6 +49,8 @@ export const TabsContainer = () => {
         }
         
     ]
+    
+    console.log(tabs.isActive);
     return (
         <>
             <div className='flex items-center overflow-x-scroll md:gap-12 lg:overflow-auto gap-7 '>

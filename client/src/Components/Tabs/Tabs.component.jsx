@@ -31,7 +31,7 @@ const TabsSm = () => {
     }])
 
     const { tabName } = useParams();
-
+    console.log(tabName);
     // useEffect(() => {
     //     if (tabName) {
     //         const updateTab = tab.map((name) => {

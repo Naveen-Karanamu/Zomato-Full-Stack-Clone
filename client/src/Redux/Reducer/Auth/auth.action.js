@@ -36,18 +36,18 @@ export const signUp = (userData) => async (dispatch) => {
     }
 }
 
-// export const googleAuth = (userData) => async (dispatch) => {
-//     try {
-//         const User = await axios({
-//             method: "POST",
-//             url: `http://localhost:3001/auth/signup`,
-//             data:{credentials : userData},
-//         })
+export const googleAuth = (token) => async (dispatch) => {
+    try {
+        const User = await axios({
+            method: "POST",
+            url: `http://localhost:3001/auth/signup`,
+            data:{credentials : userData},
+        })
 
-//         localStorage.setItem("zomatoUser", JSON.stringify({token:User.data.token}));
+        localStorage.setItem("zomatoUser", JSON.stringify({token}));
 
-//         return dispatch({ type: SIGN_UP, payload: User.data });
-//     } catch (error) {
-//         return dispatch({ type: "ERROR", payload: error });
-//     }
-// }
+        return dispatch({ type: SIGN_UP, payload: User.data });
+    } catch (error) {
+        return dispatch({ type: "ERROR", payload: error });
+    }
+}
